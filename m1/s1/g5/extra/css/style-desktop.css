@@ -66,6 +66,14 @@ header img{
 .affiancamento h3,p{
     font-size: 0.5;
     text-align: left;
+}
+.affiancamento h3{
+    margin-left: 220px; 
+    margin-right: 130px; 
+}
+.affiancamento p{
+    text-align: left;
+    padding-left: 0px;
     margin-left: 220px; 
     margin-right: 130px; 
 }
@@ -91,17 +99,14 @@ header img{
 
 .p1{
     font-style: italic;
-    margin-right: 200px;
 }
 .p2{
     font-size: 1.6rem;
-    margin-right: 200px;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 .p3{
     font-size: 1rem;
-    margin-right: 200px;
     margin-top: 0;
     margin-bottom: 30px;
     padding-top: 5px;
@@ -150,7 +155,7 @@ footer h2{
     font-size: 1;
 }
 .contatti p{
-    margin-right: 230px;
+    margin-left: ;
 }
 #copyright{
     font-size: 0.8rem;
