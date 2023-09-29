@@ -1,0 +1,124 @@
+/* Your styles here */
+body{
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+h1,h3,h4,h5,h6{
+    color: #25a2c3;
+}
+h2{
+    color: white;
+    font-size: 2rem;
+}
+header{
+    background-color: black;
+}
+header img{
+    width: 30%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.developer{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 45px;
+}
+.developer p{
+    margin: 20px 20px 30px 20px;
+    
+}
+#partiamo {
+    color: white;
+    background-color:#f04c2f;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.lavoro{
+    margin: 30px 0 ;
+}
+.lavoro h3{
+padding: 20px;
+}
+.lavoro p {
+    margin: 0 15px;
+}
+.lavoro img{
+    margin: 20px;
+    border-radius: 100%;
+}
+.garanzie{
+    background-color: #e22d0e;
+    color: white;
+    padding: 50px;
+}
+.p1{
+    font-style: italic;
+    margin: 30px 0px;
+}
+.p2{
+    font-size: 1.6rem;
+}
+.p3{
+    font-size: 1rem;
+}
+
+.trebox{
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.trebox div{
+    margin: 30px;
+    border: 2px solid #dee1e3;
+    
+}
+.trebox img{
+    max-width: 100%;
+}
+.trebox h3{
+    margin: 15px ;
+}
+.trebox p{
+    margin:10px 20px 40px 20px;
+}
+
+footer {
+    background-color: #25a2c3;
+    color: white;
+    padding: 35px;
+}
+footer h2{
+    margin-bottom: 20px;
+}
+.contatti{
+    padding-bottom:30px;
+    font-size: 1rem;
+}
+.contatti a{
+    color: white;
+    display: block;
+    font-size: 1;
+}
+#copyright{
+    font-size: 0.8rem;
+    border-top:1px solid white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+#copyright a{
+    color: white;
+}
