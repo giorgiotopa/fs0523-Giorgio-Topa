@@ -64,8 +64,9 @@ header img{
     
 }
 .affiancamento h3,p{
-    font-size: 0.5;
+    font-size: 1;
     text-align: left;
+    
 }
 .affiancamento h3{
     margin-left: 220px; 
@@ -75,7 +76,7 @@ header img{
     text-align: left;
     padding-left: 0px;
     margin-left: 220px; 
-    margin-right: 130px; 
+    margin-right: 130px;     
 }
 .affiancamento h3{
    margin-bottom: 5px;
