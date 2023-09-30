@@ -1,0 +1,47 @@
+header{
+    text-align: center;
+}
+header img{
+    width: 200px;
+}
+body{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.sottotesto{
+    background-color: lightgoldenrodyellow;
+    border-top: 1px solid orange;
+    color: rgb(18, 108, 124)
+}
+
+
+#sallyvegas{
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+}
+.featured {
+    border-left: 2px solid orange;
+   padding-left: 20px;
+
+}
+#idfeatured {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#idtured{
+    margin-top: 0;
+    padding-top: 0;
+}
+.focaccia {
+    width: 100%;
+    border-radius: 1%;
+}
+h2{
+    border-bottom: 2px solid cadetblue;
+    padding-bottom: 20px;
+}
