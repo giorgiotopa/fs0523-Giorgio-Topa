@@ -74,10 +74,10 @@ let stringa2 = " EPICODE: benvenuti in questo esercizio"
 
 function epify(a) {
     if (a.startsWith("EPICODE")) {
-        return  a
+        return a
 
     } else {
-        return  "EPICODE" + a
+        return "EPICODE" + a
     }
 }
 
@@ -115,7 +115,7 @@ let parametro = "EPICODE"
 
 
 function reverseString(str) {
-	return str.split('').reverse().join('')
+    return str.split('').reverse().join('')
 }
 
 
@@ -155,7 +155,7 @@ console.log(upperFirst(str));
 let primoeultimo = "Eliminazione"
 
 function cutString(a) {
-    return a.slice(1,length-1)
+    return a.slice(1, length - 1)
 }
 
 console.log(cutString(primoeultimo));
@@ -166,7 +166,11 @@ console.log(cutString(primoeultimo));
 */
 
 function giveMeRandom(n) {
-    return n = Math.floor(Math.random()*10)
+    let casuali = []
+    for (let i = 0; i < n; i++) {
+    casuali.push(Math.floor(Math.random() * 10))
+    }
+    return casuali
 }
 
 
