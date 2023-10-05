@@ -233,14 +233,12 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 
 console.log("CHARACTERS BEFORE", characters.length);
 
-for (let i = 0; i < characters.length; i++) {
-  const currentCharacter = characters[i];
+for (let i = 0; i < characters.length; i++){
+ 
+for (let j = 0; j < femaleCharacters.length; j++){
 
-  for (let j = 0; j < femaleCharacters.length; j++) {
-    const currentFemaleCharacter = femaleCharacters[j];
-
-    if (currentFemaleCharacter.name === currentCharacter) {
-      characters.splice(i, 1);
+  if (femaleCharacters[j].name === characters[i]){
+    characters.splice(i,1)
     }
   }
 }
