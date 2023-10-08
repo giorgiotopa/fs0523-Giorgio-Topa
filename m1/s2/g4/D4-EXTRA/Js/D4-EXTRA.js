@@ -15,20 +15,24 @@ function giveMeRandom(n) {
     return casuali
 }
 
-function checkArray(casuali) {
-    for (let i = 0; i < casuali.length; i++) {
-        if (casuali[i] > 5) {
-            let maggiori = console.log(casuali[i] + "è maggiore di 5");
-        } else if (casuali[i] == 5) {
-            let uguali = console.log(casuali[i] + "è uguale a 5");
+function checkArray(n) {
+    let somma = 0
+
+    for (let i = 0; i < n.length; i++) {
+        if (n[i] > 5) {
+            console.log(n[i] + " è maggiore di 5");
+            somma += n[i];
+        } else if (n[i] == 5) {
+            console.log(n[i] + " è uguale a 5");
         } else {
-            let minori = console.log(casuali[i] + "è minore a 5");
+            console.log(n[i] + " è minore di 5");
         }
     }
-    return console.log(maggiori + uguali + minori );
+    console.log(somma + " è il risultato della somma dei numeri maggiori di 5");
 }
 
-console.log("ei");
+checkArray(giveMeRandom(7));
+
 
 
 /* EXTRA 2
