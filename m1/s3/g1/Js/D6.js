@@ -95,26 +95,20 @@ function calcolastringhe(a) {
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
-/*let numdispari = []
 
-for (let i = 0; i < 100; i++) {
-  const dispanuma = i[i];  
-};
-
-console.log(dispanuma);
-
-
-function disp(a) {
+function oddArray() {
+  
+  let arr = [];
+  
   for (let i = 0; i < 100; i++) {
-    if (a[i] % 2 !== 0 ) {
-      a.push[a[i]]
-    }    
+    if (i % 2 !== 0)  arr.push(i)
+   }
+
+   return arr;
+
   }
-  return a
-}
 
-console.log(disp(numdispari));
-
+console.log( oddArray() );
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -236,26 +230,78 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+function oldesMovie(){
+
+let oldest = movies[0];
+movies.forEach( n  => {
+  if (n.Year < oldest.Year) {
+    oldest = n;
+  }
+})
+return oldest ;
+}
+console.log(oldesMovie());
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+
+function getArray(n) {
+  return array = n.length
+}
+
+console.log(getArray(movies));
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+function titoli() {
+  return titolifilm = movies.map( n=> n.Title);
+
+}
+
+console.log(titoli());
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+function moviesthismillennio () {
+  
+   return movies.filter(film => film.Year >= 2000 && film.Year < 3000);
+   
+}
+console.log(moviesthismillennio());
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+
+function sommarius() {
+  return movies.reduce((p, c) => p + Number(c.Year), 0);
+}
+
+console.log(sommarius());
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+function film(array, id) {
+   return array.find((element) => element.imdbID == id)
+}
+
+console.log(film(movies,'tt4154796'));
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+
+const getMovieByYear = function (array, year) {
+  return array.findIndex((elem) => parseInt(elem.Year) === year)
+}
+
+console.log(getMovieByYear(movies, 2005))
+
