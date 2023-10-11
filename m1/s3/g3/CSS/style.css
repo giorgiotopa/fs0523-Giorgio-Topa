@@ -1,0 +1,62 @@
+
+body{
+    background-color:bisque ;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    background-color:darkgoldenrod;
+    padding: 30px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+form{
+    text-align: center;
+    margin-top: 100pX;
+    
+}
+
+#myinput{
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 10px;
+}
+
+#mybutton {
+    font-size: large;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#mylist{
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid black;
+    margin-top: 30px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+#mylist li{
+    margin: 10px;
+}
+
+.selectedlist{
+    text-decoration: line-through;
+}
+.selectedlist li{
+    margin-right: 20px;
+}
+.selectedlist button{
+
+    font-size: large;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 20px;
+}
+
