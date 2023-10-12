@@ -1,0 +1,43 @@
+
+body{
+   text-align: center;
+   background-color:bisque;
+}
+
+h1{
+   font-size: 50px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   color: goldenrod;
+   margin-top: 20px;
+}
+
+
+#tabellone{
+   width: 800px;
+   margin: 0 auto;
+}
+
+table{
+   margin-top: 100px;
+   background-color:goldenrod;
+   border-radius: 10px;
+}
+
+div{
+   text-align: center;
+
+}
+
+tr,td {
+   width: 30px;
+   border: 3px solid rgb(161, 89, 1);
+   text-align: center;
+}
+
+button{
+   border-radius: 5px;
+   background-color: rgb(161, 89, 1);
+   font-size: larger;
+   color: beige;
+   margin-top: 20px;
+}
