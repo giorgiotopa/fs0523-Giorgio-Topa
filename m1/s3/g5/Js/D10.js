@@ -550,7 +550,7 @@ function background() {
 function newlist() {
   let li = document.createElement('li');
   let list = document.getElementById('myList');
-  list.append(li);
+  return list.append(li);
 }
 newlist();
 
@@ -599,6 +599,20 @@ addclass();
   ***
 
 */
+
+function halfTree(h) {
+    
+  for (let i = 0; i < h; i++) {
+      let riga = ' ';
+      for (let j = 0; j < i; j++) {
+        riga = ' * '        
+      }
+    console.log(riga);
+  }  
+
+}
+
+halfTree(10);
 
 
 /* ESERCIZIO 28
