@@ -30,6 +30,10 @@
       .myHeading {
         color: #ff00d6;
       }
+
+      table{
+        width: 100%;
+      }
     </style>
   </head>
 
@@ -68,7 +72,25 @@
       </h2>
     </div>
 
-    <div id="tableArea"></div>
+    <div id="tableArea">
+
+      <!--
+        <table class = 'classetr'>
+          <tr><td classe = 'tdclass'></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+
+
+        </table>
+
+
+
+      -->
+
+
+    </div>
 
     <footer>
       <h3>
@@ -80,9 +102,16 @@
       </h3>
     </footer>
     <script>
+      /******************************************************************/
+
+  
+
       /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
+
+    
+
 
       const changeTitle = function (titolo) {
        let title = document.querySelector('h1');
@@ -192,26 +221,47 @@
       */
 
       const revealFooterLink = function () {
-          return alert('https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents');
+
+        let link = document.querySelector('footer a');
+        let url = link.getAttribute('href')
+
+          return alert(url);
       }
 
       let footer = document.querySelector('footer');
       footer.addEventListener("click", revealFooterLink);
 
-      /* ESERCIZIO 11
+/******************************************/
+
+    /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      /*const generateTable = function () {
-        let table = document.getElementById('tableArea');
-        let elementitabella = table(document.createElementNS('td', 'immagine'));
-        elementitabella = document.createElementNS('td', 'immagine');
-        return elementitabella
+    const generateTable = function () {
+      let div = document.getElementById('tableArea');      
+      let table = document.createElement('table');
+
+        div.append(table);
+        table.classList.add('table');
+
+        for (i = 0; i <= 5; i++) {
+          let tr = document.createElement('tr');                      
+           tr.classList.add('trclass')
+           table.append(tr)
+
+          for (j = 0; j <=4; j++ ){
+           let  td = document.createElement('td');
+                td.classList.add('tdclass');
+                tr.append(td);
+                td.innerText = 'TD';
+          }
+        }
       }
 
-      generateTable()
+      generateTable();
 
+      
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
