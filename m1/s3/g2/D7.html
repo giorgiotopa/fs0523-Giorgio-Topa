@@ -57,6 +57,15 @@
         margin: 0;
         
       }
+
+      .imgnone{
+        display: none;
+      }
+
+      .randomcolor{
+        color: randomColor;
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -244,100 +253,142 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
+
     const generateTable = function () {
-      let div = document.getElementById('tableArea');      
-      let table = document.createElement('table');
+      const container = document.getElementById("tableArea")
+      const table = document.createElement("table")
+      
 
-        div.append(table);
-        table.classList.add('table');
+      const firstRow = document.createElement("tr")
 
-        for (i = 0; i < 5; i++) {
-          let tr = document.createElement('tr');                      
-           tr.classList.add('trclass')
-           table.append(tr)
+      const thImage = document.createElement("th")
+      thImage.innerText = "Immagine"
+      const thProduct = document.createElement("th")
+      thProduct.innerText = "Prodotto"
+      const thQuantity = document.createElement("th")
+      thQuantity.innerText = "Quantità"
+      const thPrice = document.createElement("th")
+      thPrice.innerText = "Prezzo"
 
 
-           switch (i) {
-            case 0 :
-            let th = document.createElement('th');
-            let th1 = document.createElement('th');
-            let th2 = document.createElement('th');
-            let th3 = document.createElement('th');
-            th.classList.add('thclass');
-            th1.classList.add('thclass');
-            th2.classList.add('thclass');
-            th3.classList.add('thclass');
-            
-            th.innerText = 'Immagine';
-            th1.innerText = 'Nome Prodotto';
-            th2.innerText = 'Quantità';
-            th3.innerText = 'Prezzo';
-            
-            tr.append(th);
-            tr.append(th1);
-            tr.append(th2);
-            tr.append(th3);
-             break;
-           
-            default:
-              
-              for (z = 0; z < 4; z++ ){
-                let  td = document.createElement('td');
-                     
-                     tr.append(td);
+      const images = [
+        "https://m.media-amazon.com/images/I/81yJf4K+L1L._AC_SY450_.jpg",
+        "https://m.media-amazon.com/images/I/61MRTh9xotL._AC_SX679_.jpg",
+        "https://www.tradeinn.com/f/13805/138054505/samsung-smartphone-galaxy-s21-5g-8gb-128gb-6.2.jpg",
+        "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1661333885.70133010!500x500.png",
+        "https://tomatosmartphone.it/wp-content/uploads/2022/06/EU-IN_Green.png"
+      ]
 
-                switch (z) {
-                  case 0:
-                    td.innerHTML = '<img src="https://picsum.photos/200/300?random=1"/>'
-                    td.classList.add('tdimage')
-                    break;
+      firstRow.append(thImage)
+      firstRow.append(thProduct)
+      firstRow.append(thQuantity)
+      firstRow.append(thPrice)
+      table.append(firstRow)
 
-                  case 1 :
-                  td.classList.add('tdclass');
-                    td.innerText = 'ProductX';
-                  break;
 
-                  case 2 :
-                  td.classList.add('tdclass');
-                    td.innerText = '500';
-                  break;
+      for (let i = 0; i < images.length; i++) {
+        const newRow = document.createElement("tr")
 
-                  case 3 :
-                  td.classList.add('tdclass');
-                    td.innerText = '1000';
-                  break;                
-                }
-              }
-           }
-        }
+        const tdImage = document.createElement("td")
+        tdImage.classList.add('tdimage')
+        tdImage.innerHTML = `<img src=${images[i]} alt="smartphone" height="200" />`
+        const tdProduct = document.createElement("td")
+        tdProduct.classList.add('tdclass')
+        tdProduct.innerText = "Smartphone"
+        const tdQuantity = document.createElement("td")
+        tdQuantity.classList.add('tdclass')
+        tdQuantity.innerText = Math.floor(Math.random() * 50)
+        const tdPrice = document.createElement("td")
+        tdPrice.classList.add('tdclass')
+        tdPrice.innerText = Math.floor(Math.random() * 500) + "€"
+
+        newRow.append(tdImage)
+        newRow.append(tdProduct)
+        newRow.append(tdQuantity)
+        newRow.append(tdPrice)
+        table.append(newRow)
       }
 
-      generateTable();
+
+      container.append(table)
+    }
+
+    generateTable()
 
       
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {}
+        const addRow = function (imgUrl, productName, quantity, price) {
+      const table = document.querySelector("table")
+
+      const newRow = document.createElement("tr")
+
+      const tdImage = document.createElement("td")
+      tdImage.classList.add('tdimage')
+      tdImage.innerHTML = `<img src=${imgUrl} alt="smartphone" height="200" />`
+      const tdProduct = document.createElement("td")
+      tdProduct.classList.add('tdclass')
+      tdProduct.innerText = productName
+      const tdQuantity = document.createElement("td")
+      tdQuantity.classList.add('tdclass')
+      tdQuantity.innerText = quantity
+      const tdPrice = document.createElement("td")
+      tdPrice.classList.add('tdclass')
+      tdPrice.innerText = price + "€"
+
+      newRow.append(tdImage)
+      newRow.append(tdProduct)
+      newRow.append(tdQuantity)
+      newRow.append(tdPrice)
+      table.append(newRow)
+
+    }
+  
+  addRow("https://data.wikomobile.com/documents/images/IT/dbd2f986d94529fc20c0864e2c5c978c.jpg", "Wiko", 10, 200)
+
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {}
+      const hideAllImages = function () {
+        const img = document.querySelectorAll('.tdimage')
+        img.forEach(n => n.classList.add('imgnone'))
+      }
+
+      //hideAllImages()
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
+   
+   const changeColorWithRandom = function () {
+     let changeMyColor = document.getElementById('changeMyColor')
+     changeMyColor.addEventListener('click', function () {        
+       const red = Math.round(Math.random() * 255);
+       const green = Math.round(Math.random() * 255);
+       const blue = Math.round(Math.random() * 255);
+    
+       const randomColor = `rgb(${red},${green},${blue})`;
+       changeMyColor.style.color = randomColor
+       changeMyColor.style.cursor = 'pointer'
+       changeMyColor.style.userSelect = "none"
+        })
+      }
 
-      const changeColorWithRandom = function () {}
+      changeColorWithRandom()
 
       /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
-      const deleteVowels = function () {}
+    const deleteVowels = function () {
+      document.querySelectorAll("h1,h2,h3,p,a,li,th,td").forEach((node) => node.innerText = [...node.innerText].filter(char => { char = char.toLowerCase(); return char !== "e" && char !== "a" && char !== "i" && char !== "o" && char !== "u" }).join(""))
+    }
+
+    // deleteVowels()
     </script>
   </body>
 </html>
