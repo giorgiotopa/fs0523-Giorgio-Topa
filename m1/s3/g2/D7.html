@@ -32,7 +32,30 @@
       }
 
       table{
-        width: 100%;
+        width: 50%;
+        border: 3px solid #ff00d6;
+        padding: 0;
+        margin: 0;
+      }
+
+      .thclass{
+        border: 1px solid #ff00d6;
+        margin: 0;
+      }
+
+      .tdimage{
+        width: 20px;
+        height: 100px;
+        border: 1px solid #ff00d6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .tdclass{
+        text-align: center;
+        border: 1px solid #ff00d6;
+        margin: 0;
+        
       }
     </style>
   </head>
@@ -73,23 +96,6 @@
     </div>
 
     <div id="tableArea">
-
-      <!--
-        <table class = 'classetr'>
-          <tr><td classe = 'tdclass'></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td></tr>
-
-
-        </table>
-
-
-
-      -->
-
-
     </div>
 
     <footer>
@@ -245,17 +251,64 @@
         div.append(table);
         table.classList.add('table');
 
-        for (i = 0; i <= 5; i++) {
+        for (i = 0; i < 5; i++) {
           let tr = document.createElement('tr');                      
            tr.classList.add('trclass')
            table.append(tr)
 
-          for (j = 0; j <=4; j++ ){
-           let  td = document.createElement('td');
-                td.classList.add('tdclass');
-                tr.append(td);
-                td.innerText = 'TD';
-          }
+
+           switch (i) {
+            case 0 :
+            let th = document.createElement('th');
+            let th1 = document.createElement('th');
+            let th2 = document.createElement('th');
+            let th3 = document.createElement('th');
+            th.classList.add('thclass');
+            th1.classList.add('thclass');
+            th2.classList.add('thclass');
+            th3.classList.add('thclass');
+            
+            th.innerText = 'Immagine';
+            th1.innerText = 'Nome Prodotto';
+            th2.innerText = 'Quantità';
+            th3.innerText = 'Prezzo';
+            
+            tr.append(th);
+            tr.append(th1);
+            tr.append(th2);
+            tr.append(th3);
+             break;
+           
+            default:
+              
+              for (z = 0; z < 4; z++ ){
+                let  td = document.createElement('td');
+                     
+                     tr.append(td);
+
+                switch (z) {
+                  case 0:
+                    td.innerHTML = '<img src="https://picsum.photos/200/300?random=1"/>'
+                    td.classList.add('tdimage')
+                    break;
+
+                  case 1 :
+                  td.classList.add('tdclass');
+                    td.innerText = 'ProductX';
+                  break;
+
+                  case 2 :
+                  td.classList.add('tdclass');
+                    td.innerText = '500';
+                  break;
+
+                  case 3 :
+                  td.classList.add('tdclass');
+                    td.innerText = '1000';
+                  break;                
+                }
+              }
+           }
         }
       }
 
