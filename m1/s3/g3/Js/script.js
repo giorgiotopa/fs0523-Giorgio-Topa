@@ -16,15 +16,16 @@ buttonsave.addEventListener('click', function(e) {
         list.prepend(elementlist);
         input.value = '';         
         
-        elementlist.addEventListener('click', function() {
-            elementlist.classList.add('selectedlist');
-            let buttondelete = document.createElement('button');
-            buttondelete.innerText = 'Delete';
+        let buttondelete = document.createElement('button');
+        buttondelete.innerText = 'Delete';
 
+        elementlist.addEventListener('click', function() {
+
+            elementlist.classList.add('selectedlist');
             elementlist.append(buttondelete);
         
             buttondelete.addEventListener('click',function () {
-             elementlist.remove();
+            elementlist.remove();
                 
             }) 
         })
