@@ -62,19 +62,6 @@ let shoppingCart = [
 ]
 console.log(shoppingCart);
 
-function shoppingCartTotal1(shoppingCart) {
-
-    let total = 0;
-    for (const item of shoppingCart) {
-        total += item.price * item.quantity;
-    }
-
-    return total;
-}
-
-const totalAmount = shoppingCartTotal1(shoppingCart);
-console.log("Totale carrello: $" + totalAmount);
-
 function shoppingCartTotal() {
     let totalpay = 0
     shoppingCart.forEach(element => {
@@ -84,7 +71,7 @@ function shoppingCartTotal() {
     });
     return totalpay
 }
-console.log(shoppingCartTotal());
+console.log( "Totale da Pagare: $" + shoppingCartTotal());
 
 
 
@@ -136,6 +123,7 @@ function latestShoppingCart(array) {
 
 console.log(latestShoppingCart(shoppingCart));
 
+
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
@@ -156,32 +144,94 @@ function loopUntil(n) {
     }
 }
 
-loopUntil(5);
+loopUntil(2);
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const myArray = [1, 2, '3', 4, 'five', 6];
+
+function average(array) {
+    
+    let sum = 0;
+    let count = 0;
+
+    for (const n of array) {
+        if (typeof array[n] === 'number' && !isNaN(array[n])) {
+           sum += array[n];
+           count ++;
+        }
+    }
+    return sum/count
+}
+
+console.log('La media del mio array è ' + average(myArray)); 
+
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let stringArray = ["gatto", "cane", "elefante", "scoiattolo", "leone"];
+
+function longest(array) {
+    let longstring = array[0];
+
+    array.forEach(string => {
+        if ( longstring < string) {
+           longstring = string 
+        }
+    });
+    return longstring
+}
+
+console.log("La stringa più lunga è " + longest(stringArray));
+
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
+function isEmailNotSpam(emailContent) {
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+    let contentUpperCase = emailContent.toUpperCase();
+  
+    if (contentUpperCase.includes("SPAM") || contentUpperCase.includes("SCAM")) {
+      return false;
+    }
+  
+    return true; 
+  }
+  
+let emailContent1 = "Ciao! Questo è un'email normale.";
+let emailContent2 = "Hai vinto un milione di euro! Controlla ora! (SCAM)";
+let isNotSpam1 = isEmailNotSpam(emailContent1);
+let isNotSpam2 = isEmailNotSpam(emailContent2);
+  
+  console.log("Email 1 non è spam:", isNotSpam1); 
+  console.log("Email 2 non è spam:", isNotSpam2); 
+  
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giorniPassatiDaData(data) {
+
+    let dataCorrente = new Date();  
+
+    let differenzaInMilliseconds = dataCorrente - data;
+
+    let millisecondiInUnGiorno = 24 * 60 * 60 * 1000;
+    let giorniPassati = Math.floor(differenzaInMilliseconds / millisecondiInUnGiorno);
+  
+    return giorniPassati;
+  }
+  
+  let dataFornita = new Date("2023-10-1");
+  let giorniTrascorsi = giorniPassatiDaData(dataFornita);
+  console.log("Giorni passati:", giorniTrascorsi);
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
@@ -191,4 +241,26 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
+function matrixGenerator(x, y) {
+    let matrix = [];
+  
+    for (let i = 0; i < y; i++) {
+      const row = [];
+      for (let j = 0; j < x; j++) {
+        
+        const value = `${i}${j}`;
+        row.push(value);
+      }
+      matrix.push(row);
+    }
+  
+    return matrix;
+  }
+  
+ 
+  let x = 5;
+  let y = 3;
+  let result = matrixGenerator(x, y);
+  console.log(result);
