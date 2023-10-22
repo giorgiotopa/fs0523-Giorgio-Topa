@@ -449,7 +449,7 @@ function searchByTitle(str) {
   return movies.filter(film =>  film.Title == str )
 }
 
-console.log(searchByTitle('Avengers: Endgame'));
+console.log(searchByTitle('Avengers'));
 
 
 /* ESERCIZIO 18
