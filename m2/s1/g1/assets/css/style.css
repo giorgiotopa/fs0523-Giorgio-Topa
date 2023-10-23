@@ -30,6 +30,8 @@ header nav ul {
     margin: 0;
 }
 header nav li {
+    display: inline-block;
+    margin: 0 10px;
     list-style: none;
 }
 header nav li a {
