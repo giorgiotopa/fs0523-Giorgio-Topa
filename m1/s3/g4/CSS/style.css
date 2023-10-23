@@ -11,27 +11,40 @@ h1{
    margin-top: 20px;
 }
 
+main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 #tabellone{
-   width: 800px;
-   margin: 0 auto;
+   width: 950px;
+   margin-top: 10em;
+   border: 5px solid goldenrod;
+   display: flex;
+   flex-wrap: wrap;
+   
 }
 
-table{
-   margin-top: 100px;
-   background-color:goldenrod;
-   border-radius: 10px;
+
+.casella{
+   width: 50px;
+   height: 50px;
+   border: 3px solid goldenrod;
+   box-sizing: border-box;
+   font-weight: bold;
+   font-size: large;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
 }
+
 
 div{
-   text-align: center;
-
-}
-
-tr,td {
-   width: 30px;
-   border: 3px solid rgb(161, 89, 1);
-   text-align: center;
+   /* text-align: center; */
+   
 }
 
 button{

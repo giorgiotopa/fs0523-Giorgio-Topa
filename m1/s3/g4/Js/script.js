@@ -1,36 +1,14 @@
-let tabellone = document.getElementById('tabellone')
-
-      let tabella = document.createElement('table')
-       
-          let  numeri = 1;
-
-        for (let i = 0; i < 4; i++) {
-           
-            let righe = document.createElement('tr');    
-            
-            for (let j = 0; j < 19; j++){
-
-            if (numeri <= 76){
-            let celle = document.createElement('td');
-            celle.innerHTML = numeri;
-            righe.append(celle);
-            numeri ++;
-            }
-        }
-            tabella.append(righe);
-        } 
-
-        tabellone.append(tabella);
+let tabellone = document.getElementById('tabellone');
 
 
-    let bottone = document.createElement('button');
-    bottone.innerText = 'Estrai';
-    tabellone.append(bottone);
+function createTabella(a,b) {
+    for (let i = a; i <= b; i++) {
+        let casella = document.createElement('div')
+        casella.innerText = i
+        casella.classList.add('casella')
+        tabellone.append(casella)
+    }
+}
 
-    bottone.addEventListener('click', function () {
+createTabella(1,76);
 
-        let estrazione = Math.floor(Math.random() * 76);
-         let numerostratto = 0;
-         numerostratto.i
-        
-    })
