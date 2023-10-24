@@ -16,32 +16,6 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
-.icon{
-
-}
-
-.icon i{
-font-size: 4em;
-color:#4B65B6;
-padding: 10px;
-background-color: rgb(255, 255, 255, 0.5);
-border: 2px solid #fff;
-border-radius: 10px;
-position: absolute;
-right: 0;
-}
-
-#plus{
-top: 10px;
-}
-#calendar{
-top: 100px;
-}
-#toppage {
-  color: #D35F5F;
-  bottom: 50px;
-}
-
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -54,7 +28,7 @@ header {
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
   position: sticky;
-  top: 10px;
+  top: 0px;
   z-index: 1;
 }
 
@@ -429,3 +403,57 @@ footer a {
     display: none;
   }
 }
+
+  .icon i{
+  font-size: 2.5em;
+  color:#4B65B6;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  }
+
+  
+  #toppage {
+    color: #D35F5F;
+    position: fixed;
+    bottom: 10px;
+  }
+  @media screen and (max-width: 1199px) {
+    
+        #plus{
+          top: unset;
+          bottom: 150px;
+          }
+        #calendar{
+          top: unset;
+          bottom: 80px;
+          }
+    
+      }
+  @media screen and (min-width: 1200px) {
+    
+  #plus{
+  top: 130px;
+  }
+  #calendar{
+    top: 230px;
+  }  
+}
+
+aside div{
+  position: relative;
+}
+  
+.fa-tag{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  font-size: 4.5rem;
+  color: #969494;
+  opacity: 0.5;
+}
+  
