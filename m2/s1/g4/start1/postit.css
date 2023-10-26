@@ -1,0 +1,64 @@
+:root {
+    --giallo: #fefece;
+    --verde: #ccfece;
+    --viola: #cacafa;
+}
+
+body {
+    background-color: #666666;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    margin-top: 10em;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Indie Flower', cursive;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    column-gap: 0.1em;
+    row-gap: 1.7em;
+    max-width: 1200px;
+}
+
+#container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 15em;
+    height: 12em;
+    box-shadow: 5px 5px 7px 0px black;
+}
+
+#container div:hover{
+    transform: translateZ(15em);
+    flex-basis: 20em;
+    height: 15em;
+    box-shadow: 9px 9px 11px 0px black;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.yellow {
+    transform: rotate(-5deg);
+    background-image: linear-gradient(var(--giallo) 0%, var(--giallo) 75%, #bdbda3 90%, #bdbda3 100%);
+}
+
+.green {
+    transform: rotate(5deg);
+    background-image: linear-gradient(var(--verde) 0%, var(--verde) 75%, #a1b8a1 90%, #a1b8a1 100%);
+}
+
+.violet {
+    transform: rotate(-8deg);
+    background-image: linear-gradient(var(--viola) 0%, var(--viola) 75%, #8b8c9b 90%, #8b8c9b 100%);
+}
