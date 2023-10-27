@@ -1,0 +1,40 @@
+/* @media screen and (min-width:500px) and (max-width:1195px) { 
+    header nav img{
+        flex-basis: 1rem;
+        flex-grow: 1;
+    }
+    
+    header nav ul{
+        
+        display: flex;
+        justify-content: space-evenly;
+        flex-basis: auto;
+        flex-grow: 2;
+    }
+    
+    header nav ul li{
+        padding: 2rem 0;
+    }
+    
+    .getstarted{
+        background-color: #191919;
+        padding: 0.6rem 0.5rem;
+        border-radius: 3.5rem;
+        color: white;
+    } 
+}
+
+#hero{
+    background-color: #ffc017;
+    /* padding-left: 12rem;   */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #191919;
+}
+#hero h2{
+    font-size: 4rem;
+}
+#hero svg{
+    width: 20rem;
+} */ 

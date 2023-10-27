@@ -4,6 +4,7 @@
 :root{
     font-family: 'Roboto', sans-serif;
     overflow: inherit;
+    color: #191919;
 }
 li{
     list-style: none;
@@ -13,11 +14,14 @@ a{
     text-decoration: none;
     color: #191919;
 }
+button{
+    cursor: pointer;
+}
 /* ---------------Header--------------------- */
 header{
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -42,7 +46,7 @@ header nav ul li{
     padding: 2rem 0;
 }
 
-#getstarted{
+.getstarted{
     background-color: #191919;
     padding: 0.6rem 1.3rem;
     border-radius: 3.5rem;
@@ -62,7 +66,7 @@ header nav ul li{
 #hero h2{
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 6rem;
-    display: block;
+    color: black;
 }
 #hero p{
     font-size: 1.6rem;
@@ -77,6 +81,9 @@ header nav ul li{
     font-size: 1.4rem;
     border-radius: 2rem;
     margin-top: 3rem;
+}
+#hero button:hover{
+    background-color: black;
 }
 #hero svg{
     width: 35rem;
@@ -128,7 +135,15 @@ h6 img{
     font-weight: bold;
 }
 .date-read{
+    display: flex;
+    justify-content: space-between;
     color: gray;
+}
+.date-read span{
+    display: flex;
+}
+.date-read span img{
+    margin-left: 0.2rem;
 }
 /* ------------------Container Section2 --------------- */
 #container-section2-aside-footer{
@@ -150,11 +165,6 @@ h6 img{
     width: 100%;
 }
 
-.date-read{
-    display: flex;
-    justify-content: space-between;
-    color: gray; 
-}
 .date-read button{
     border-style: none;
     border-radius: 2rem;
@@ -172,11 +182,12 @@ h6 img{
 }
 
 /*-------------------- Aside-Footer--------------- */
-#aside-footer{    
+#position-sticky{
     position: sticky;
-    top: 0;
+    top: 6rem;
 }
 aside h4{
+   
     font-size: 1.2rem;
 }
 aside ul{
@@ -204,5 +215,23 @@ footer ul{
 footer ul li a{    
     color: gray;
 }
+
+/* ---------------Nav BG--------------- */
+
+
+.nav-bg{
+    background-color: white;
+    animation: dissolvenza 1s 
+}
+
+.startedbg{
+    background-color: #1a8917;
+}
+
+@keyframes dissolvenza{
+    0% { background-color: #ffc017;};
+    100% {background-color: white};
+}
+
 
 
