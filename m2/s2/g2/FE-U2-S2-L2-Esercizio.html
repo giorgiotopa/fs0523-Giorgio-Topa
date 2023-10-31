@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/scrypt.css">
+  
+  <title>Sito Viaggi</title>
+
+  <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="image/logo.png" alt="logo" width="46" height="40"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Saldi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Welcome Summer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Last Minute</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Recensioni</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit">Cerca</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class=" container bg-light border border-light-subtle my-5 rounded-3">
+        <div class="px-4 py-1 my-5 text-secondary">
+          <h2
+            class="display-1 text-secondary-emphasis fw-medium d-flex align-items-center border-bottom border-dark-subtle py-3 justify-content-md-center justify-content-lg-start">
+            Viaggit<span class="fs-6">- Feel the Freedom</span></h2>
+          <div class="col-lg-6 ">
+            <p class="lead mb-4 fw-medium fst-italic text-md-center text-lg-start">Scopri le destinazioni più calde del
+              momento!</p>
+            <div class="d-grid gap-2 d-sm-flex py-5 justify-content-md-center justify-content-lg-start">
+              <button type="button" class="btn btn-info text-white fs-5 fw-medium px-5 gap-3 ">Prenota ora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <h3 class="fw-medium text-black">Saldi</h3>
+        <p class="text-info">Nascondi sezione</p>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"> 
+          <div class=" card border border-info border-2">
+            <img src="image/spiaggia1.jpg" class="card-img-top img-fluid" id="immagini" alt="mare">
+            <div class="card-body">
+              <h5 class="card-title">Maldive</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card border border-info border-2">
+            <img src="image/spiaggia2.jpg" class="card-img-top img-fluid" id="immagini" alt="mare">
+            <div class="card-body">
+              <h5 class="card-title">Ibiza</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card border border-info border-2">
+            <img src="image/spiaggia3.jpg" class="card-img-top img-fluid" id="immagini" alt="mare">
+            <div class="card-body">
+              <h5 class="card-title">Scalea</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
+          <div class="card border border-info border-2">
+            <img src="image/spiaggia4.jpg" class="card-img-top img-fluid" id="immagini" alt="mare">
+            <div class="card-body">
+              <h5 class="card-title">Mondragone</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-info">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <h3 class="fw-medium text-black mt-5 mb-4">Welcome Summer</h3>
+
+        <div class="row grid gap-0 row-gap-5">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4"> 
+            <div class=" card">
+              <img src="image/spiaggia1.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Maldive</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="image/spiaggia2.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Ibiza</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="image/spiaggia3.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Scalea</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="image/spiaggia4.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Mondragone</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4"> 
+            <div class=" card">
+              <img src="image/spiaggia1.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Maldive</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="image/spiaggia2.jpg" class="card-img-top img-fluid shadow-lg" id="immagini" alt="mare">
+              <div class="card-body">
+                <h5 class="card-title">Ibiza</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-info">Prenota</a>
+              </div>
+            </div>
+          </div>          
+        </div>       
+        
+      <div class="d-none d-lg-block">
+          <h3 class="fw-medium text-black mt-5 mb-4">Offerta Del Giorno</h3>
+
+          <div class="row ">
+              <div class="col-8">
+                <img src="image/spiaggia1.jpg" id="mondrag" class="img-fluid rounded shadow" alt="Maldive">
+              </div>
+              <div class="col-4">
+                <h3 class="display-5">Mondragone</h3>
+                <p class="font-monospace">15.01.2021-31.01.2021</p>
+                <p class="lead">Ville a partire da 500 €, non fartele sfuggire!</p>
+                <span class="badge rounded-pill text-bg-dark">Best offer</span>
+              </div>
+          </div>
+      </div>
+
+      <h3 class="fw-medium text-black mt-5 mb-4">Last minute</h3>
+
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <div class="card shadow ">
+            <img src="image/spiaggia1.jpg" alt="mare" class="card-img">
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="fw-medium text-black text-center mt-5 mb-4">Recensioni</h3>
+
+      
+        <div class="d-flex">
+          <img src="image/user2.png" class="border border-2 border-info rounded-circle" height="60" alt="user">
+          <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore debitis nulla consectetur dolore illum sequi rerum dicta labore maxime accusamus voluptatum ut dignissimos beatae delectus ipsum vero, ad aspernatur adipisci.
+          Tempora, consectetur. Id voluptates itaque reprehenderit modi eum voluptatibus voluptatum tempore corporis! Sed earum aut repellat molestias similique eius fugiat dolore voluptas? Odio harum enim amet quisquam ipsum? Maiores, iusto?
+          Deleniti temporibus animi ea incidunt impedit. Dicta magnam laboriosam corporis, fugit libero optio omnis, ad ipsum provident esse reprehenderit veritatis quibusdam beatae eum? Delectus labore inventore, quasi dolorum non illum!</p>
+        </div>
+        <div class="d-flex">
+          <img src="image/user2.png" class="border border-2 border-info rounded-circle" height="60" alt="user">
+          <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore debitis nulla consectetur dolore illum sequi rerum dicta labore maxime accusamus voluptatum ut dignissimos beatae delectus ipsum vero, ad aspernatur adipisci.
+          Tempora, consectetur. Id voluptates itaque reprehenderit modi eum voluptatibus voluptatum tempore corporis! Sed earum aut repellat molestias similique eius fugiat dolore voluptas? Odio harum enim amet quisquam ipsum? Maiores, iusto?
+          Deleniti temporibus animi ea incidunt impedit. Dicta magnam laboriosam corporis, fugit libero optio omnis, ad ipsum provident esse reprehenderit veritatis quibusdam beatae eum? Delectus labore inventore, quasi dolorum non illum!</p>
+        </div>
+        <div class="d-flex">
+          <img src="image/user2.png" class="border border-2 border-info rounded-circle" height="60" alt="user">
+          <p class="ms-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore debitis nulla consectetur dolore illum sequi rerum dicta labore maxime accusamus voluptatum ut dignissimos beatae delectus ipsum vero, ad aspernatur adipisci.
+          Tempora, consectetur. Id voluptates itaque reprehenderit modi eum voluptatibus voluptatum tempore corporis! Sed earum aut repellat molestias similique eius fugiat dolore voluptas? Odio harum enim amet quisquam ipsum? Maiores, iusto?
+          Deleniti temporibus animi ea incidunt impedit. Dicta magnam laboriosam corporis, fugit libero optio omnis, ad ipsum provident esse reprehenderit veritatis quibusdam beatae eum? Delectus labore inventore, quasi dolorum non illum!</p>
+        </div>
+
+    </div>
+
+  </main>
+
+  <footer
+  class="container-fluid bg-dark text-light d-flex flex-column justify-content-center align-items-center py-5">
+  <button type="button" class="btn btn-outline-secondary mb-4">
+      Contattaci
+  </button>
+
+  <span>© 2021 Kalina Travel LTD. All Rights Reserved.</span>
+</footer>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
