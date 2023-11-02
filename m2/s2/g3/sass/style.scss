@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'colori';
+@import 'font';
+@import 'spaziature';
+@import 'bottoni';
+@import 'mixin';
+@import 'animazioni';
+
+header{
+    background-color: $bg_hero;
+    color: $testo;
+    font-family: $font;
+}
