@@ -7,7 +7,41 @@
 @import 'animazioni';
 
 header{
-    background-color: $bg_hero;
-    color: $testo;
+    background-color: $purple;
+    color: $white;
     font-family: $font;
 }
+
+nav{
+    @include flex-center
+}
+ul{
+    display: flex;
+    margin-bottom: 5rem;   
+}
+li{
+    font-size: 2rem;
+}
+h2{
+    font-size: 7rem;
+    color: $orange;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero img{
+    width: 30rem;
+    border-radius: 5rem;
+    margin-bottom: 5rem;
+}
+

@@ -52,8 +52,170 @@ table {
   border-spacing: 0;
 }
 
+.padding-inline-sm {
+  padding-inline: 12px;
+}
+
+.padding-inline-normal {
+  padding-inline: 16px;
+}
+
+.padding-inline-md {
+  padding-inline: 24px;
+}
+
+.padding-inline-lg {
+  padding-inline: 36px;
+}
+
+.padding-inline-xl {
+  padding-inline: 52px;
+}
+
+.padding-inline-xxl {
+  padding-inline: 72px;
+}
+
+.padding-block-sm {
+  padding-block: 12px;
+}
+
+.padding-block-normal {
+  padding-block: 16px;
+}
+
+.padding-block-md {
+  padding-block: 24px;
+}
+
+.padding-block-lg {
+  padding-block: 36px;
+}
+
+.padding-block-xl {
+  padding-block: 52px;
+}
+
+.padding-block-xxl {
+  padding-block: 72px;
+}
+
+.margin-inline-sm {
+  margin-inline: 12px;
+}
+
+.margin-inline-normal {
+  margin-inline: 16px;
+}
+
+.margin-inline-md {
+  margin-inline: 24px;
+}
+
+.margin-inline-lg {
+  margin-inline: 36px;
+}
+
+.margin-inline-xl {
+  margin-inline: 52px;
+}
+
+.margin-inline-xxl {
+  margin-inline: 72px;
+}
+
+.margin-block-sm {
+  margin-block: 12px;
+}
+
+.margin-block-normal {
+  margin-block: 16px;
+}
+
+.margin-block-md {
+  margin-block: 24px;
+}
+
+.margin-block-lg {
+  margin-block: 36px;
+}
+
+.margin-block-xl {
+  margin-block: 52px;
+}
+
+.margin-block-xxl {
+  margin-block: 72px;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 3px;
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #0e6cff;
+  color: #f4f4f4;
+}
+
+.btn-secondary {
+  background-color: #ff8700;
+  color: #f4f4f4;
+}
+
+.btn-tertiary {
+  background-color: #4caf50;
+  color: #f4f4f4;
+}
+
 header {
   background-color: #640fc5;
   color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 7rem;
+  color: #ff8700;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero img {
+  width: 30rem;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
 }/*# sourceMappingURL=style.css.map */

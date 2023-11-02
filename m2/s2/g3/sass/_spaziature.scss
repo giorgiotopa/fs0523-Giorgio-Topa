@@ -1,0 +1,22 @@
+
+$sizes:(
+    sm:12px,
+    normal:16px,
+    md:24px,
+    lg:36px,
+    xl:52px,
+    xxl:72px
+);
+
+@mixin generate($type,$direction){
+    @each $misura, $value in $sizes{
+    .#{$type}-#{$direction}-#{$misura}{
+        #{$type}-#{$direction}:$value;
+        }
+    }
+};
+
+@include generate(padding,inline);
+@include generate(padding,block );
+@include generate(margin,inline);
+@include generate(margin,block );
