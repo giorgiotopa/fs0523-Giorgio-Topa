@@ -41,28 +41,85 @@
             
         </nav>
 
-        <div class="contenitore2 text-light">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center grid gap-3">
-                    <h3>TV Shows</h3>
-                    <div id="divselected" class="d-flex bg-black border border-1 border-white ps-1">
-                        <select class="selected">
-                            <option class="selected" value="genres">Genres</option>
-                            <option class="selected" value="comedy">Comedy</option>
-                            <option class="selected" value="horror">Horros</option>
-                        </select> 
-                    </div>               
-                </div>
-                <div class="d-flex">
-                    <div class="">
-                        <i class="bi bi-text-left"></i>
+        <div class="contenitore2 text-light my-3">
+
+                <div class="row justify-content-between">
+                    <div class="col-6">
+                        <div class="row">
+                            <h3 class="col-md-3">TV Shows</h3>
+                            <select class="col-md-2 selected  bg-black border border-1 border-white px-1 text-light">
+                                <option class="selected" value="genres">Genres</option>
+                                <option class="selected" value="comedy">Comedy</option>
+                                <option class="selected" value="horror">Horros</option>
+                            </select>
+                        </div> 
                     </div>
-                    <div>
-                        <i class="bi bi-grid-fill"></i>
+                    <div class="col-1 d-flex">
+                        <div class="border border-1 border-white list-grid d-flex justify-content-center align-items-center">
+                            <i class="bi bi-text-left"></i>
+                        </div>
+                        <div class="border border-1 border-white list-grid d-flex justify-content-center align-items-center">
+                            <i class="bi bi-grid-fill" id="grid"></i>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
+                <!----------------------------------------- Carousell----------------------------------- -->
+
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="">
+                            <div class="carousel-item active">
+                                    <div class="row">
+                                      <img src="assets/media/media0.webp" class="col-2" alt="...">
+                                      <img src="assets/media/media1.jpg" class="col-2" alt="...">
+                                      <img src="assets/media/media2.webp" class="col-2" alt="...">
+                                      <img src="assets/media/media3.webp" class="col-2" alt="...">
+                                      <img src="assets/media/media4.jpg" class="col-2" alt="...">
+                                      <img src="assets/media/media5.webp" class="col-2" alt="...">
+                                    </div>
+                                </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <img src="assets/media/media0.webp" class="col-2" alt="...">
+                                    <img src="assets/media/media1.jpg" class="col-2" alt="...">
+                                    <img src="assets/media/media2.webp" class="col-2" alt="...">
+                                    <img src="assets/media/media3.webp" class="col-2" alt="...">
+                                    <img src="assets/media/media4.jpg" class="col-2" alt="...">
+                                    <img src="assets/media/media5.webp" class="col-2" alt="...">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="carousel-item">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="carousel-item">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="carousel-item">
+                                  <img src="assets/media/media4.jpg" class="" alt="...">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="carousel-item">
+                                  <img src="assets/media/media5.webp" class="" alt="...">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             
             
         

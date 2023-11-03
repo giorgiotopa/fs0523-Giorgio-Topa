@@ -15,14 +15,18 @@ nav button span{
     padding-inline: 1.5rem;
     padding-right: 2.8rem;
 }
-
-#divselected{
+.selected{
     width: 6rem;
     height: 2rem;
-    
 }
-.selected{
-    background-color: black;
-    color: white;
-    border: none;
+.list-grid{
+    height: 2rem;
+    width: 3rem;
+}
+.list-grid:hover{
+    box-shadow: 0px 0px 7px 1px #FFFFFF;
+}
+
+#grid{
+    font-size: 0.7rem;
 }
