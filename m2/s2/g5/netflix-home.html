@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Home</title>
+</head>
+<body class="bg-dark">
+    <div class="container-fluid text-light">
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+            <div class="container-fluid">                
+              <a class="navbar-brand" href="#"><img src="assets/netflix_logo.png" class="img-fluid" alt="netflix-logo"></a>
+              <button class="navbar-toggler rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="bi bi-list"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="d-flex justify-content-between container-fluid">
+                    <div class="navbar-nav">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-light" href="#">TV Shows</a>
+                        <a class="nav-link text-light" href="#">Movies</a>
+                        <a class="nav-link text-light" href="#">Recently Added</a>
+                        <a class="nav-link text-light" href="#">My List</a>
+                    </div>
+                    <div class="d-flex align-items-center grid gap-3 column-gap-3 ps-2 pe-3 navbar-nav">        
+                        <i class="bi bi-search"></i>
+                        <a class="nav-link text-light" href="#">Kids</a>
+                        <i class="bi bi-bell-fill"></i>
+                        <div class="d-flex grid gap-0 column-gap-1 align-items-center">
+                            <img src="assets/kids_icon.png" id="kids-icon" alt="kids-icon">
+                            <i class="bi bi-caret-down-fill" id="arrkids"></i>
+                        </div>                 
+                    </div> 
+                </div>             
+              </div>
+            </div>
+            
+        </nav>
+
+        <div class="contenitore2 text-light">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center grid gap-3">
+                    <h3>TV Shows</h3>
+                    <div id="divselected" class="d-flex bg-black border border-1 border-white ps-1">
+                        <select class="selected">
+                            <option class="selected" value="genres">Genres</option>
+                            <option class="selected" value="comedy">Comedy</option>
+                            <option class="selected" value="horror">Horros</option>
+                        </select> 
+                    </div>               
+                </div>
+                <div class="d-flex">
+                    <div class="">
+                        <i class="bi bi-text-left"></i>
+                    </div>
+                    <div>
+                        <i class="bi bi-grid-fill"></i>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+        
+        
+            
+            
+            
+            
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

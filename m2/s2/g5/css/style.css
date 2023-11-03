@@ -1,0 +1,28 @@
+div nav a img{
+    width: 8rem;
+}
+nav button span{
+    color: white;
+}
+
+#kids-icon{
+    width: 1.5rem;
+}
+#arrkids{
+    font-size: 0.5rem;
+}
+.contenitore2{
+    padding-inline: 1.5rem;
+    padding-right: 2.8rem;
+}
+
+#divselected{
+    width: 6rem;
+    height: 2rem;
+    
+}
+.selected{
+    background-color: black;
+    color: white;
+    border: none;
+}
