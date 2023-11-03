@@ -30,3 +30,7 @@ nav button span{
 #grid{
     font-size: 0.7rem;
 }
+
+.carousel-item img{
+    padding: 0.1rem;
+}
