@@ -34,3 +34,11 @@ nav button span{
 .carousel-item img{
     padding: 0.1rem;
 }
+footer{
+    /* margin: 0 auto; */
+    color: #818181;
+}
+footer a{
+    text-decoration: none;
+    color: #818181;
+}
