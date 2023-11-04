@@ -44,3 +44,17 @@ footer a{
     background: rgb(6,6,6);
     background: linear-gradient(180deg, rgba(6,6,6,1) 0%, rgba(20,20,20,1) 50%, rgba(33,37,41,1) 100%);    
 }
+
+#profile-content h2{
+    border-bottom: 1px solid #818181;
+}
+.bord-bottom{
+    border-bottom: 1px solid #818181;
+}
+#allmaturity{
+    width: 11rem;
+    font-size: 0.8rem;
+}
+.font-sizes{
+    font-size: 0.8rem;;
+}
