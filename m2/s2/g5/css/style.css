@@ -1,4 +1,4 @@
-div nav a img{
+#logo{
     width: 8rem;
 }
 #kids-icon{
@@ -37,4 +37,10 @@ footer a{
 }
 #service-code{
     border: 1px solid #818181;
+}
+/* ------------------------------------------------------Profile-Page------------------------------------------- */
+
+.header-profile-page{
+    background: rgb(6,6,6);
+    background: linear-gradient(180deg, rgba(6,6,6,1) 0%, rgba(20,20,20,1) 50%, rgba(33,37,41,1) 100%);    
 }
