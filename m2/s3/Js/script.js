@@ -77,11 +77,12 @@ petForm.addEventListener('submit', function(e){
 })
 
 function addpetList(pet) {
-    let petList = document.getElementById('petList');
-    let list = document.createElement('li');
-    list.textContent = pet.petName;
-    petList.appendChild(list); 
-}
+          
+        let petList = document.getElementById('petList');
+        let list = document.createElement('li');
+        list.textContent = `Nome dell'animale: ${pet.petName}, Nome del proprietario: ${pet.ownerName}, Specie: ${pet.species}, Razza: ${pet.breed}`;
+        petList.appendChild(list); 
+    }
 
 function clearList() {
     let petName= document.getElementById('petName');
