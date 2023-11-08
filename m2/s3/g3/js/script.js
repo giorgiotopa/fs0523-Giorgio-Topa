@@ -42,7 +42,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
         button.innerText = 'Scarta'
         cardBody.append(button);
         button.addEventListener('click', () => {
-            card.remove();
+            col.remove();
         });
 
     });
