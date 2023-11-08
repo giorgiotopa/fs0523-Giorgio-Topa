@@ -8,7 +8,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
     res.forEach(el => {
         
         let col = document.createElement('div');
-        col.classList.add('col-8', 'col-md-5', 'col-lg-4','col-xxl-3');
+        col.classList.add('col-7', 'col-md-5', 'col-lg-4','col-xxl-3');
         contentCard.appendChild(col);
 
         let card = document.createElement('div');
@@ -17,7 +17,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
         col.appendChild(card);
 
         let img = document.createElement('img');
-        img.classList.add('card-img-top');       
+        img.classList.add('card-img-top','img-fluid');  
         img.src = el.img;
         img.alt = el.title;
         img.style.height = '25rem';
@@ -44,6 +44,29 @@ fetch('https://striveschool-api.herokuapp.com/books')
         button.addEventListener('click', () => {
             col.remove();
         });
+
+        let carrello = document.getElementById('carrello');
+       for (const libro of carrello.children) {
+           let rimuovi = document.createElement('button');
+           rimuovi.classList.add('btn', 'btn-danger');
+           libro.appendChild(rimuovi)
+       }
+
+
+
+
+
+        let button2 = document.createElement('a');
+        button2.classList.add('btn', 'btn-warning');
+        button2.innerText = 'Acquista'
+        cardBody.append(button2);
+        button2.addEventListener('click', () => {
+            carrello.appendChild(card)
+            cardBody.removeChild(button);
+            cardBody.removeChild(button2);
+            col.remove();
+        });
+
 
     });
 })
