@@ -26,25 +26,37 @@ function trovafoto(ricerca,array) {
     });
 }
 let arrey_foto_sunset = [];
+let array_foto_mountain = [];
 
 trovafoto('sunset', arrey_foto_sunset);
+trovafoto('mountain', array_foto_mountain);
 
 
 console.log(arrey_foto_sunset);
 
-let btn1 = document.getElementById('btn1');
 
-btn1.addEventListener('click',function(){
+
+function replaceSvg(array){
     let svg = document.querySelectorAll('svg');
     
     svg.forEach((svg,i )=> {
-        if (i > 0 && i - 1 < arrey_foto_sunset.length) {
+        if (i > 0 && i - 1 < array.length) {
             const nuovaimg = document.createElement('img');
-            nuovaimg.src = arrey_foto_sunset[i].src.tiny;
-            svg.parentNode.replaceChild(nuovaimg,svg);
-            
+            nuovaimg.src = array[i].src.tiny;
+            svg.parentNode.replaceChild(nuovaimg,svg);            
         }
     });
+}
+let btn1 = document.getElementById('btn1');
+let btn2 = document.getElementById('btn2');
+
+btn1.addEventListener('click', function() {
+    replaceSvg(arrey_foto_sunset);
 });
+
+btn2.addEventListener('click', function() {
+    replaceSvg(array_foto_mountain);
+});
+
 
 
