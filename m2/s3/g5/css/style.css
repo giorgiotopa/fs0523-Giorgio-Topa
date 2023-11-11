@@ -1,3 +1,11 @@
 ul{
     list-style: none;
 }
+a{
+    text-decoration: none;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.card{
+    width: 18rem;
+}

@@ -107,7 +107,6 @@ function createProductElement(el) {
     btnModifica.addEventListener( 'click', function() {
 
         let clone = getClone();
-        // let containerClone = document.getElementById('containerTemplate');
        
         list.appendChild(clone);
 
@@ -129,7 +128,7 @@ function createProductElement(el) {
             brandModal.value,
             imageUrlModal.value,
             priceModal.value
-        );
+        );       
      
         fetch("https://striveschool-api.herokuapp.com/api/product/" + dataId, {
             method: 'PUT',
@@ -139,7 +138,8 @@ function createProductElement(el) {
             },
             body: JSON.stringify(modificaProduct)
         });
-      
+
+        
     });
     });
 
