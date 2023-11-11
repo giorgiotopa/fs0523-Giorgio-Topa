@@ -91,9 +91,13 @@ headers: {
     btnModifica.setAttribute('data-bs-toggle', 'modal');
     btnModifica.setAttribute('data-bs-target', '#exampleModal');
     btnModifica.setAttribute('data_id', `${list.id}`);
-
+    let dtIdmod = btnModifica.getAttribute('data_id');
+    console.log(dtIdmod);
     let btnSave = document.getElementById('saveChanges');
     btnSave.setAttribute('data_id', `${list.id}`);
+    let dtIdsv = btnSave.getAttribute('data_id');
+    console.log(dtIdsv);
+    
 
     btnSave.addEventListener('click', function () {
             let nomeModal = document.getElementById('nameModal');
@@ -101,10 +105,11 @@ headers: {
             let brandModal = document.getElementById('brandModal');
             let imageUrlModal = document.getElementById('imageUrlModal');
             let priceModal = document.getElementById('priceModal');
-            let data_id = btnSave.data_id
+            
+            // let dataId = this.getAttribute('data_id');
+
             let modificaProduct = new Product(nomeModal.value, descriptionModal.value, brandModal.value, imageUrlModal.value, priceModal.value);
-                console.log(list.id);
-            fetch("https://striveschool-api.herokuapp.com/api/product/" + data_id, {
+            fetch("https://striveschool-api.herokuapp.com/api/product/" + dtIdmod, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -121,25 +126,7 @@ headers: {
 });
 
 
-// let btnSave = document.getElementById('saveChanges');
-// btnSave.addEventListener('click', function () {
-//     let nomeModal = document.getElementById('nameModal');
-//     let descriptionModal = document.getElementById('descriptionModal');
-//     let brandModal = document.getElementById('brandModal');
-//     let imageUrlModal = document.getElementById('imageUrlModal');
-//     let priceModal = document.getElementById('priceModal');
-//     let list = brandModal.parentNode
-//     console.log(list);
-//     let modificaProduct = new Product(nomeModal.value, descriptionModal.value, brandModal.value, imageUrlModal.value, priceModal.value);
 
-//     fetch("https://striveschool-api.herokuapp.com/api/product/" + listId, {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZjYwNTk0YjFkODAwMThkNTYzMmYiLCJpYXQiOjE2OTk2MDgwNzAsImV4cCI6MTcwMDgxNzY3MH0.GP9gAGgGGwufx2ZuU6DUyZd0GHaMNmR7VREMQK-FQ4I",
-//         },
-//         body: JSON.stringify(modificaProduct)
-//     })
-// });
+
 
 
