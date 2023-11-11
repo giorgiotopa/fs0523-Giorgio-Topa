@@ -77,11 +77,12 @@ function getClone(){
 }
 
 function createProductElement(el) {
-    let list = document.createElement('li');
+    let list= document.createElement('li')
     list.textContent = `Nome: ${el.name}, Descrizione: ${el.description}, Marca: ${el.brand}, Immagine: ${el.imageUrl}, Prezzo: ${el.price}`;
     list.id = el._id;
 
     let btnElimina = document.createElement('button');
+    btnElimina.classList.add('btn', 'btn-danger','rouunded-1', 'mx-2');
     btnElimina.textContent = 'Elimina';
     btnElimina.addEventListener('click', function () {
         fetch("https://striveschool-api.herokuapp.com/api/product/" + list.id, {
@@ -99,18 +100,18 @@ function createProductElement(el) {
     });
 
     let btnModifica = document.createElement('button');
+    btnModifica.classList.add('btn', 'btn-warning','rouunded-1', 'mx-2');
     btnModifica.textContent = 'Modifica';
     btnModifica.setAttribute('data-id', `${list.id}`);
-    
+     
     btnModifica.addEventListener( 'click', function() {
 
         let clone = getClone();
-        
+        // let containerClone = document.getElementById('containerTemplate');
        
         list.appendChild(clone);
 
     let btnSave = document.getElementById('saveChanges');
-    console.log(btnSave);
     let dataId = btnModifica.getAttribute('data-id');
 
 

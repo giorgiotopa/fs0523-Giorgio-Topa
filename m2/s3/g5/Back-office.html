@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <div class="container mt-508g779tuo">
-
-        <h2>Aggiungi Prodotto</h2>
-        <form id="productForm">
-            <label for="name">Nome</label>
-            <input type="text" id="name" required>
-
-            <label for="description">Description</label>
-            <input type="text" id="description" required>
-
-            <label for="brand">Brand</label>
-            <input type="text" id="brand" required>
-
-            <label for="imageUrl">Image</label>
-            <input type="text" id="imageUrl" required>
-
-            <label for="price">Price</label>
-            <input type="text" id="price" required>
-
-            <input type="submit" value="Aggiungi Prodotto" required>
+    <div class="container mt-2 text-center">
+      <h2 class="display-2 mb-5">Back-Office</h2>
+      <div class="row ">
+        <h2>Nuovo Prodotto</h2>
+        <form id="productForm" class="row justify-content-center">
+            <div class="col-5 row">
+              <label for="name">Nome</label>
+              <label for="description">Description</label>
+              <label for="brand">Brand</label>
+              <label for="imageUrl">Image</label>
+              <label for="price">Price</label>
+            </div>
+            <div class="col-5 row">
+              <input class="col-7" type="text" id="name" required>
+              <input class="col-7" type="text" id="description" required>
+              <input class="col-7" type="text" id="brand" required>
+              <input class="col-7" type="url" id="imageUrl" required>
+              <input class="col-7" type="number" id="price" required>
+            </div>    
+ 
+            <input class="col-3 my-3"  type="submit" value="Aggiungi Prodotto" required>
 
         </form>
-
+      </div>
         
 
         <h2>Lista prodotti</h2>
@@ -42,31 +44,37 @@
 
 
     <!-- ------------------------------Input Modifica Esterni------------------------------ -->
-    <div id="contModifica"></div>
+    <div id="containerTemplate"></div>
 
-  <template id="myTemplate">            
-    <label for="name">Nome</label>
-    <input type="text" id="nameModal" required>
-
-    <label for="description">Description</label>
-    <input type="text" id="descriptionModal" required>
-
-    <label for="brand">Brand</label>
-    <input type="text" id="brandModal" required>
-
-    <label for="imageUrl">Image</label>
-    <input type="text" id="imageUrlModal" required>
-
-    <label for="price">Price</label>
-    <input type="text" id="priceModal" required>
-
-    <input type="submit" value="Modifica Prodotto" id = "saveChanges" required> 
+  <template id="myTemplate">
+     <div>             
+      <label for="name">Nome</label>
+      <input type="text" id="nameModal" required>
+    </div>
+    <div> 
+      <label for="description">Description</label>
+      <input type="text" id="descriptionModal" required>
+    </div>
+    <div>
+      <label for="brand">Brand</label>
+      <input type="text" id="brandModal" required>
+    </div>
+    <div>
+      <label for="imageUrl">Image</label>
+      <input type="text" id="imageUrlModal" required>
+    </div>
+    <div>
+      <label for="price">Price</label>
+      <input type="text" id="priceModal" required>
+    </div>
+      <input type="submit" value="Modifica Prodotto" id = "saveChanges" required> 
     
   </template> 
 
 
+
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- <script src="js/bozza.script.js"></script> -->
+    <script src="js/back-office.script.js"></script>
 </body>
 </html>
