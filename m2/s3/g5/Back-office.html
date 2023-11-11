@@ -41,43 +41,28 @@
     </div>
 
 
-<!-- ------------------------------------Modal------------------------------- -->
+    <!-- ------------------------------Input Modifica Esterni------------------------------ -->
+    <div id="contModifica"></div>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modifica</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body row">
-                <label for="name">Nome</label>
-                <input type="text" id="nameModal" required>
-    
-                <label for="description">Description</label>
-                <input type="text" id="descriptionModal" required>
-    
-                <label for="brand">Brand</label>
-                <input type="text" id="brandModal" required>
-    
-                <label for="imageUrl">Image</label>
-                <input type="text" id="imageUrlModal" required>
-    
-                <label for="price">Price</label>
-                <input type="text" id="priceModal" required>
-    
-                <!-- <input type="submit" value="Aggiungi Prodotto" required> -->
-    
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <template id="myTemplate">            
+    <label for="name">Nome</label>
+    <input type="text" id="nameModal" required>
 
+    <label for="description">Description</label>
+    <input type="text" id="descriptionModal" required>
 
+    <label for="brand">Brand</label>
+    <input type="text" id="brandModal" required>
+
+    <label for="imageUrl">Image</label>
+    <input type="text" id="imageUrlModal" required>
+
+    <label for="price">Price</label>
+    <input type="text" id="priceModal" required>
+
+    <input type="submit" value="Modifica Prodotto" id = "saveChanges" required> 
+    
+  </template> 
 
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

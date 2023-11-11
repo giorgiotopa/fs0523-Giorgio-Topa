@@ -52,7 +52,6 @@ productForm.addEventListener('submit', function(e){
     clearList();
 });
 // -----------------------------------Controllo dati nell'indirizzo-------------------------------------
-let id = 0;
 
 fetch("https://striveschool-api.herokuapp.com/api/product/", {
 headers: {
@@ -69,6 +68,13 @@ headers: {
     productList.appendChild(list);
 })
 });
+
+// ------------------------------- funzione template-------------------------
+
+function getClone(){
+    let temp = document.getElementById('myTemplate');
+    return temp.content.cloneNode(true);
+}
 
 function createProductElement(el) {
     let list = document.createElement('li');
@@ -94,12 +100,19 @@ function createProductElement(el) {
 
     let btnModifica = document.createElement('button');
     btnModifica.textContent = 'Modifica';
-    btnModifica.setAttribute('data-bs-toggle', 'modal');
-    btnModifica.setAttribute('data-bs-target', '#exampleModal');
-    btnModifica.setAttribute('data_id', `${list.id}`);
+    btnModifica.setAttribute('data-id', `${list.id}`);
+    
+    btnModifica.addEventListener( 'click', function() {
+
+        let clone = getClone();
+        
+       
+        list.appendChild(clone);
 
     let btnSave = document.getElementById('saveChanges');
-    let dataId = btnModifica.getAttribute('data_id');
+    console.log(btnSave);
+    let dataId = btnModifica.getAttribute('data-id');
+
 
     btnSave.addEventListener('click', function () {
         let nomeModal = document.getElementById('nameModal');
@@ -107,7 +120,7 @@ function createProductElement(el) {
         let brandModal = document.getElementById('brandModal');
         let imageUrlModal = document.getElementById('imageUrlModal');
         let priceModal = document.getElementById('priceModal');
-        
+       
 
         let modificaProduct = new Product(
             nomeModal.value,
@@ -116,7 +129,7 @@ function createProductElement(el) {
             imageUrlModal.value,
             priceModal.value
         );
-
+     
         fetch("https://striveschool-api.herokuapp.com/api/product/" + dataId, {
             method: 'PUT',
             headers: {
@@ -125,6 +138,8 @@ function createProductElement(el) {
             },
             body: JSON.stringify(modificaProduct)
         });
+      
+    });
     });
 
     list.appendChild(btnModifica);
