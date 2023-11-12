@@ -1,5 +1,4 @@
 
-// -----------------------------------Controllo dati nell'indirizzo-------------------------------------
 
 fetch("https://striveschool-api.herokuapp.com/api/product/", {
 headers: {
