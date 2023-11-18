@@ -1,0 +1,46 @@
+@import 'color';
+@import 'mixin';
+
+.card{
+    height: 24rem;
+    width: 15rem;
+}
+.card-body{
+    .card-text{
+        color: $tertiary;   
+    }
+    .star{
+        color: rgb(255, 174, 0);
+        span{
+            color: $tertiary;
+        }
+    }
+    .price{
+        font-weight: bold;
+        border-bottom: 1px solid $secondary;
+        span{
+            color: $tertiary;
+            text-decoration: line-through;
+        }
+    }
+    p {
+        display: flex;
+        justify-content: space-between;
+        span{
+            color: $tertiary;
+        }
+        img{
+            // width: 30px;
+            // border-radius: 100%;
+            // margin-right: 7px;
+            @include avatar-img;
+        }
+    }
+
+
+
+}
+
+
+
+
