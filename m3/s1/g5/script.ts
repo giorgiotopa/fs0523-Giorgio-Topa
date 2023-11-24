@@ -117,10 +117,7 @@ class Iphone extends Smartphone{
       filtraChiamatePerDataOra(dataEOra: Date): void {
 
         const chiamateFiltrate = this.registroChiamate.filter((chiamata) => {       
-            
-
-        return chiamata.dataOra.getHours() === dataEOra.getHours() // il confronto corretto che tenesse conto dell'intera data e non soltanto dell'ora sarebbe sato con il metodo getTime(), ma la precisione del valore era tale da rendere troppo complesso il confronto con una data fortina dall'esterno. 
-
+        return chiamata.dataOra.getHours() === dataEOra.getHours()
         });
 
         console.log(`\nChiamate effettuate in data e ora ${dataEOra}:`);
