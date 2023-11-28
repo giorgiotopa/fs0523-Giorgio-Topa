@@ -1,0 +1,12 @@
+<p>pages1 works!</p>
+
+
+<div *ngFor="let phone of smartphone; let i = index">
+  <ul *ngIf="phone.disponibile">
+    <li>{{i + 1}}</li>
+    <li>{{phone.marca}}</li>
+    <li>{{phone.prezzo}}</li>
+    <li>{{phone.disponibile}}</li>
+    <button (click)="phone.disponibile = !phone.disponibile">Abilita/disabilita</button>
+  </ul>
+</div>
