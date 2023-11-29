@@ -1,0 +1,12 @@
+
+
+<div *ngFor="let post of post">
+  <div class="card text-bg-warning mb-3" *ngIf="post.active">
+    <div class="card-header">{{post.type}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.description}}</p>
+      <button class="btn btn-primary" (click)="post.active = !post.active">Disattiva</button>
+    </div>
+  </div>
+</div>
