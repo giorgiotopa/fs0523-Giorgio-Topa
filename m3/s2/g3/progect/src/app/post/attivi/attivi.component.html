@@ -1,7 +1,7 @@
 
 
 <div *ngFor="let post of post">
-  <div class="card text-bg-warning mb-3" *ngIf="post.active">
+  <div class="card mb-3" [ngClass]="{'bg-dark text-light':post.type==='politic','bg-warning':post.type==='education','bg-info':post.type==='new'}" *ngIf="post.active">
     <div class="card-header">{{post.type}}</div>
     <div class="card-body">
       <h5 class="card-title">{{post.title}}</h5>
