@@ -4,6 +4,7 @@
     <div class="card-header">{{post.type}}</div>
     <div class="card-body">
       <h5 class="card-title">{{post.title}}</h5>
+      <h6 appEvidenzia class="card-title rounded-2 p-2">{{post.author | uppercase}}</h6>
       <p class="card-text">{{post.description}}</p>
       <button class="btn btn-primary" (click)="post.active = !post.active">Attiva</button>
     </div>
