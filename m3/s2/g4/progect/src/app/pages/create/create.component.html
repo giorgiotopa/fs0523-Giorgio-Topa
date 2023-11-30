@@ -1,0 +1,10 @@
+<form>
+  <input type="text" placeholder="Marca" [(ngModel)]="newSmartphone.marca" name = "marca" class = "form-control">
+  <input type="number" placeholder="Prezzo" [(ngModel)]="newSmartphone.prezzo" name = "prezzo" class = "form-control">
+  <select name="active" [(ngModel)]="newSmartphone.active" class="form-control">
+    <!-- <option selected value=""></option> -->
+    <option value="1">Active</option>
+    <option value="0">Not active</option>
+  </select>
+  <button class="btn btn-success">Salva</button>
+</form>
