@@ -6,5 +6,9 @@
     <option value="1">Active</option>
     <option value="0">Not active</option>
   </select>
-  <button class="btn btn-success">Salva</button>
+  <button (click)="save()" class="btn btn-success">Salva</button>
 </form>
+
+<div *ngIf="loading" class="alert alert-warning">
+  Salvataggio
+</div>
