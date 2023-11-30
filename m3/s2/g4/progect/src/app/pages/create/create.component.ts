@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Smartphone } from '../../Models/smartphone';
 import { SmartphoneService } from '../../smartphone.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -11,7 +12,7 @@ export class CreateComponent {
 
   constructor(
     private smartphoneSvc:SmartphoneService,
-    // private router:Router
+    private router:Router
     ){}
 
   newSmartphone:Partial<Smartphone> = {

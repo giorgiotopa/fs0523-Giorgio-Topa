@@ -1,1 +1,13 @@
-<p>edit works!</p>
+
+<div *ngIf="!smartphone" class="alert alert-info">
+  Caricamento in corso
+</div>
+<form *ngIf="smartphone">
+  <input type="text" required placeholder="Gusto" [(ngModel)]="smartphone.marca" name="gusto" class="form-control">
+  <input type="number" placeholder="Prezzo" [(ngModel)]="smartphone.prezzo" name="prezzo" class="form-control">
+  <select name="active" [(ngModel)]="smartphone.active" class="form-control">
+    <option value="1">Active</option>
+    <option value="0">Not active</option>
+  </select>
+  <button (click)="save()" class="btn btn-success">Salva</button>
+</form>

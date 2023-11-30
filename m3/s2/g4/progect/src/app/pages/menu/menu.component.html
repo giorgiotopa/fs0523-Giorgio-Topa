@@ -1,1 +1,23 @@
-<p>menu works!</p>
+<div *ngIf="!smartphone.length" class="alert alert-info">
+  Caricamento in corso
+</div>
+
+<table *ngIf="smartphone.length" class="table">
+  <tr>
+    <th>#</th>
+    <th>Gusto</th>
+    <th>Prezzo</th>
+    <th>Disponibile</th>
+    <th>Azioni</th>
+  </tr>
+  <tr *ngFor="let p of smartphone">
+    <td>{{p.id}}</td>
+    <td>{{p.marca}}</td>
+    <td>{{p.prezzo | currency : 'EUR'}}</td>
+    <td>{{p.active}}</td>
+    <td>
+      <a [routerLink]="['/menu','edit',p.id]" class="btn btn-warning">Modifica</a>
+      <button (click)="delete(p.id)" class="btn btn-danger">Elimina</button>
+    </td>
+  </tr>
+</table>
