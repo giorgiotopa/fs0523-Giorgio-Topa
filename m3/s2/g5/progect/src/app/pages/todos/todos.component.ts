@@ -30,13 +30,16 @@ export class TodosComponent {
     this.todoSvc.create(this.newTodo).then(res => {
       this.loading = false
     })
-    this.todoSvc.getAll().then(todo => this.todoArr = todo)
+    this.ngOnInit();
+    this.newTodo.title = ''
   }
 
   toggleStatus(id:number){
   this.todoSvc.getById(id).then(todo => {
     todo.completed = !todo.completed;
+    console.log(todo)
     this.todoSvc.update(todo)
+    this.todoArr = this.todoArr.filter(eliminatodo => eliminatodo.id !== id);
   })
   }
 
@@ -46,7 +49,6 @@ export class TodosComponent {
       this.todoSvc.delete(todo);
       this.ngOnInit();
     })
-
     }
 
 
