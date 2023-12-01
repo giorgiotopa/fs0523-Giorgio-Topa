@@ -1,5 +1,39 @@
 {
   "todo": [
-
+    {
+      "completed": false,
+      "title": "completare todo list",
+      "id": 1
+    },
+    {
+      "completed": false,
+      "title": "completare todo list",
+      "id": 2
+    },
+    {
+      "completed": false,
+      "title": "andare avanti",
+      "id": 3
+    },
+    {
+      "completed": false,
+      "title": "si carica da solo?",
+      "id": 4
+    },
+    {
+      "completed": false,
+      "title": "prova",
+      "id": 5
+    },
+    {
+      "completed": false,
+      "title": "prova44",
+      "id": 6
+    },
+    {
+      "completed": true,
+      "title": "test finale",
+      "id": 7
+    }
   ]
 }

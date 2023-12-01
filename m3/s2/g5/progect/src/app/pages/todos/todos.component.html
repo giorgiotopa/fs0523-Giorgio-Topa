@@ -1,1 +1,13 @@
-<p>todos works!</p>
+<form>
+  <input type="text" placeholder="Todo" [(ngModel)]="newTodo.title" name = "todo">
+  <button (click)="save()">Salva</button>
+</form>
+
+<div *ngIf="loading">
+  Salvataggio
+</div>
+
+<div *ngFor="let t of todoArr">
+  <p>{{t.title}}</p>
+  <button (click)="toggleStatus(t.id)">Completato</button>
+</div>
