@@ -66,31 +66,4 @@ export class TodoService {
     )
   }
 
-  // getCompletedTodo(todo:Todo):Promise<Todo>{
-  //   return fetch(this.apiUrl+`/${todo.id}`,{
-  //     method:'PUT',
-  //     headers:{
-  //       'Content-Type':'application/json'
-  //     },
-  //     body:JSON.stringify(todo)
-  //   }).then(res => res.json())
-  //   .then(todo =>
-  //     todo.filter((t: { completed: any; }) => t.completed)
-  //   )
-  // }
-  // return this.posts.filter(p => !p.active)
-
-  getIncompletedTodo(todo:Todo):Promise<Todo>{
-    return fetch(this.apiUrl+`/${todo.id}`,{
-      method:'PUT',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify(todo)
-    }).then(res => res.json())
-    .then(todo =>
-      todo.filter((t:Todo) => !t.completed)
-    )
-  }
-
 }
