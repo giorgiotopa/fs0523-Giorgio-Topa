@@ -43,7 +43,8 @@ export class TodosComponent {
   elimina(id:number){
     this.todoSvc.getById(id).then(todo => {
       todo.completed = !todo.completed;
-      this.todoSvc.delete(todo)
+      this.todoSvc.delete(todo);
+      this.ngOnInit();
     })
 
     }
