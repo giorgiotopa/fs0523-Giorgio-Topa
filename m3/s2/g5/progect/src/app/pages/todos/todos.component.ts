@@ -34,10 +34,19 @@ export class TodosComponent {
   }
 
   toggleStatus(id:number){
-
   this.todoSvc.getById(id).then(todo => {
     todo.completed = !todo.completed;
     this.todoSvc.update(todo)
   })
   }
+
+  elimina(id:number){
+    this.todoSvc.getById(id).then(todo => {
+      todo.completed = !todo.completed;
+      this.todoSvc.delete(todo)
+    })
+
+    }
+
+
 }

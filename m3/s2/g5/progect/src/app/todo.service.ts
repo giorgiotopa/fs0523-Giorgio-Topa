@@ -31,7 +31,7 @@ export class TodoService {
     }).then(res => res.json())
   }
 
-  async update(todo:Todo):Promise<Todo>{
+  update(todo:Todo):Promise<Todo>{
     return fetch(this.apiUrl+`/${todo.id}`,{
       method:'PUT',
       headers:{
@@ -39,12 +39,10 @@ export class TodoService {
       },
       body:JSON.stringify(todo)
     }).then(res => res.json())
-    // .then(obj =>
-    //    obj)
   }
 
-  delete(id:string):Promise<Todo>{
-    return fetch(this.apiUrl+`/${id}`,{
+  delete(todo:Todo):Promise<Todo>{
+    return fetch(this.apiUrl+`/${todo.id}`,{
       method:'DELETE',
       headers:{
         'Content-Type':'application/json'

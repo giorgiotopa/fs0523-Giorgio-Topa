@@ -10,4 +10,6 @@
 <div *ngFor="let t of todoArr">
   <p>{{t.title}}</p>
   <button (click)="toggleStatus(t.id)">Completato</button>
+  <button (click)="elimina(t.id)">Elimina</button>
+
 </div>
