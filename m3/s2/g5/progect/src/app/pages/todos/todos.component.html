@@ -1,15 +1,25 @@
+<h2>TO - Do</h2>
+
 <form>
-  <input type="text" placeholder="Todo" [(ngModel)]="newTodo.title" name = "todo">
+  <input type="text" placeholder="New To Do" [(ngModel)]="newTodo.title" name = "todo">
   <button (click)="save()">Salva</button>
 </form>
 
-<div *ngIf="loading">
-  Salvataggio
+
+<div class="caricamento loader" *ngIf="caricamento">
+  Caricamento in corso
 </div>
 
-<div *ngFor="let t of todoArr">
+<div class="eliminazione loader" *ngIf="eliminazione">
+  Eliminazione in corso
+</div>
+
+<div class="todoArr" *ngFor="let t of todoArr">
   <p>{{t.title}}</p>
-  <button (click)="toggleStatus(t.id)">Completato</button>
-  <button (click)="elimina(t.id)">Elimina</button>
-
+  <div>
+    <button class="completato" (click)="toggleStatus(t.id)">Completato</button>
+    <button class="elimina" (click)="elimina(t.id)">Elimina</button>
+  </div>
 </div>
+
+

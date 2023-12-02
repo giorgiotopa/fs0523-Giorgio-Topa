@@ -1,4 +1,18 @@
-<div *ngFor="let t of todoArr">
-  <p>{{t.title}}</p>
-  <!-- <p>{{t.completed}}</p> -->
+<h2>Completati</h2>
+
+<div class="caricamento loader" *ngIf="caricamento">
+  Caricamento in corso
 </div>
+<div class="eliminazione loader" *ngIf="eliminazione">
+  Eliminazione in corso
+</div>
+
+<div class="todoArr" *ngFor="let t of todoArr">
+  <p>{{t.title}}</p>
+  <div>
+    <button class="completato" (click)="toggleStatus(t.id)">Non Completato</button>
+    <button class="elimina" (click)="elimina(t.id)">Elimina</button>
+  </div>
+</div>
+
+

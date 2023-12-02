@@ -15,40 +15,46 @@ export class TodosComponent {
     private todoSvc:TodoService,
     ){}
 
+    loading:boolean = false;
+    caricamento:boolean = false;
+    eliminazione:boolean = false;
+
     ngOnInit() {
-      this.todoSvc.getAll().then(todo => this.todoArr = todo)
+      this.caricamento = true
+      this.todoSvc.getAll()
+      .then(todo => this.todoArr = todo.filter(todo => !todo.completed))
+      .then(() => this.caricamento = false)
     }
 
   newTodo:Partial<Todo> = {
-    completed: false,
+  completed: false,
   };
 
-  loading:boolean = false;
+
 
     save(){
-    this.loading = true;
     this.todoSvc.create(this.newTodo).then(res => {
-      this.loading = false
     })
     this.ngOnInit();
     this.newTodo.title = ''
   }
 
   toggleStatus(id:number){
-  this.todoSvc.getById(id).then(todo => {
+    this.caricamento = true
+    this.todoSvc.getById(id).then(todo => {
     todo.completed = !todo.completed;
-    console.log(todo)
     this.todoSvc.update(todo)
     this.todoArr = this.todoArr.filter(eliminatodo => eliminatodo.id !== id);
-  })
+  }).then(() => this.caricamento = false)
   }
 
   elimina(id:number){
+    this.eliminazione= true
     this.todoSvc.getById(id).then(todo => {
       todo.completed = !todo.completed;
       this.todoSvc.delete(todo);
-      this.ngOnInit();
-    })
+      this.todoArr = this.todoArr.filter(todoArrey => todoArrey.title !== todo.title);
+    }).then(() => this.eliminazione = false)
     }
 
 

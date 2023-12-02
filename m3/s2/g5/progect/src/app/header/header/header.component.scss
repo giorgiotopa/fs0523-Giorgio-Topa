@@ -1,11 +1,34 @@
-ul{
-  display: flex;
-  list-style: none;
-}
-a{
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 30px;
-  color: goldenrod;
-  margin-inline: 10px;
+@import "../../../styles.scss";
+
+header{
+  background-color: $color-1;
+  height: 80px;
+  padding-top: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-weight: bold;
+
+    h2{
+      font-size: 50px;
+      margin-right: 40px;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+      a{
+        text-decoration: none;
+        font-size: 25px;
+        color: goldenrod;
+        margin-inline: 10px;
+      }
+      a:hover{
+        color: black;
+      }
+    }
+  }
+
 }

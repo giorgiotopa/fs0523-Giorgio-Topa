@@ -1,7 +1,13 @@
+
 .container{
+  height: 100vh;
   margin-top: 20px;
+  margin-inline: 50px;
+  padding-block: 40px;;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
+  background-color: darkgoldenrod;
+  border-radius: 20px;
 }
