@@ -1,0 +1,14 @@
+<p>home works!</p>
+<div class="row">
+ <div class="col-3"  *ngFor="let p of product">
+   <div class="card mb-3" style="width: 18rem;">
+     <img src={{p.thumbnail}} class="card-img-top" style="height: 15rem;" alt="...">
+     <div class="card-body">
+       <h5 class="card-title" style="height: 5rem;">{{p.brand}} {{p.title}}</h5>
+       <p>{{ p.price | currency:'EUR'}}</p>
+       <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+ </div>
+</div>
+
