@@ -25,6 +25,13 @@ export class FormComponent {
   submit(){
     this.formArray.push(this.formObj);
     console.log(this.formArray);
+    this.formObj.nome = '';
+    this.formObj.cognome = '';
+    this.formObj.password = '';
+    this.formObj.confermaPassword = '';
+    this.formObj.genere = '';
+    this.formObj.biografia = '';
+    this.formObj.username = '';
 
     }
 
