@@ -9,24 +9,24 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  // product:iProduct[] = [];
-  product:any[] = [];
+  product:iProduct[] = [];
+  // product:any[] = [];
   imageProduct:any[] = [];
 
   constructor(private productSvc:StoreService){}
 
   ngOnInit(){
-    this.productSvc.getAll().subscribe(data =>{
-      console.log(data.products);
-      let i = 0
-      data.products.forEach((product:any) =>{
-        this.imageProduct[i] = product.images
-        i++;
-      })
+    this.productSvc.getAll().subscribe(data => this.product = data);
       console.log(this.imageProduct);
-
-      this.product = data.products;
       console.log(this.product);
-    })
+    }
+
+    addToFavorite(product:iProduct){
+      this.productSvc.addFavorite(product)
+    }
+    addToCart(product:iProduct){
+      this.productSvc.addToCart(product)
+    }
+
   }
-}
+

@@ -1,14 +1,25 @@
-<p>home works!</p>
-<div class="row">
- <div class="col-3"  *ngFor="let p of product">
-   <div class="card mb-3" style="width: 18rem;">
-     <img src={{p.thumbnail}} class="card-img-top" style="height: 15rem;" alt="...">
-     <div class="card-body">
-       <h5 class="card-title" style="height: 5rem;">{{p.brand}} {{p.title}}</h5>
-       <p>{{ p.price | currency:'EUR'}}</p>
-       <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
+<div class="container">
+  <div class="row">
+    <div
+    *ngFor="let prod of product"
+    class="col-12 col-md-6 mb-5">
+
+      <div class="card">
+        <img [src]="prod.thumbnail" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{prod.title}}</h5>
+          <p class="card-text">{{prod.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Categoria: {{prod.category}}</li>
+          <li class="list-group-item">Prezzo: {{prod.price | currency}}</li>
+          <li class="list-group-item">Quantità: {{prod.stock}}</li>
+        </ul>
+        <button (click)="addToFavorite(prod)"  class="btn btn-secondary">Aggiungi ai preferiti</button>
+        <button (click)="addToCart(prod)"  class="btn btn-primary">Aggiungi al carrello</button>
+      </div>
+
     </div>
- </div>
-</div>
+  </div>
+  </div>
 

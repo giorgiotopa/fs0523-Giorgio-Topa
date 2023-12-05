@@ -1,0 +1,22 @@
+<p>form works!</p>
+
+
+<form>
+
+  <input type="text" class="form-control" [(ngModel)]="formObj.nome" name="nome" placeholder="Il tuo nome">
+
+  <input type="text" class="form-control" [(ngModel)]="formObj.cognome" name="cognome" placeholder="Il tuo cognome">
+  <input type="password" class="form-control" [(ngModel)]="formObj.password" name="password" placeholder="Password">
+  <input type="password" class="form-control" [(ngModel)]="formObj.confermaPassword" name="confermaPassword" placeholder="Conferma Password">
+  <input type="text" class="form-control" [(ngModel)]="formObj.genere" name="genere" placeholder="Il tuo genere">
+  <input type="image" class="form-control" [(ngModel)]="formObj.immagineProfilo" name="immagineProfilo" placeholder="La tua immagine Profilo">
+  <input type="text" class="form-control" [(ngModel)]="formObj.biografia" name="biografia" placeholder="La tua biografia">
+  <input type="text" class="form-control" [(ngModel)]="formObj.username" name="username" placeholder="Il tuo username">
+
+
+  <button (click)="submit()" class="btn btn-primary">Invia</button>
+
+</form>
+
+Il nome è {{formObj.nome}}<br>
+Il cognome è {{formObj.cognome}}
