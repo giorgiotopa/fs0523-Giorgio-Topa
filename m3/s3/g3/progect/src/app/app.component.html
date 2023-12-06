@@ -1,0 +1,14 @@
+
+<ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/chi-siamo">Chi Siamo</a></li>
+  <li><a routerLink="/customers">Login</a></li>
+</ul>
+
+<div *ngIf="userName">
+  Benvenuto {{userName}}
+</div>
+
+
+
+<router-outlet></router-outlet>

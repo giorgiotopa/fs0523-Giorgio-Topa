@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "giorgiotopa7@gmail.com",
+      "password": "$2a$10$uZpwhdzM615sCuWyUQsrWurwZq2bz3VFFU0PnIJ55sF2eACDboaFC",
+      "nome": "Giorgio",
+      "id": 1
+    },
+    {
+      "email": "fake@email.com",
+      "password": "$2a$10$V0D3XLFmw4DCsJm540xQUudeXqndBO5mGePD4fl/a81o1.s37LIX6",
+      "nome": "Giorgio",
+      "id": 2
+    },
+    {
+      "email": "carmelo@zappulla.com",
+      "password": "$2a$10$NTq40yFwSNHl0w.dzgjhN.7OIKwrzzrQiIj7EfumlpoXi5v5lKkbi",
+      "nome": "carmelo",
+      "id": 3
+    }
+  ]
+}
