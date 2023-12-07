@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject, map } from 'rxjs';
+import { iCity } from './Models/i-city';
 
 @Injectable({
   providedIn: 'root'
@@ -24,16 +25,16 @@ export class DashboardService {
     console.log(txt);
   }
 
-  getAll(){
+  getClimate(){
     return this.http.get<any>(this.apiUrl)
     // .pipe(map(r => r.products))
   }
 
-  getCity(){
-    return this.http.get<any>(this.cityUrl)
-  }
-  getCity1(city:string){
-    return this.http.get<any>('http://api.openweathermap.org/geo/1.0/direct?q='+`/${city}`+'&limit=5&appid=b8cebc030b7ab67c7fd9147cb1c6390f')
+  // getCity(){
+  //   return this.http.get<any>(this.cityUrl)
+  // }
+  getCity(city:string){
+    return this.http.get<iCity[]>('http://api.openweathermap.org/geo/1.0/direct?q='+`/${city}`+'&limit=5&appid=b8cebc030b7ab67c7fd9147cb1c6390f')
   }
 
 
