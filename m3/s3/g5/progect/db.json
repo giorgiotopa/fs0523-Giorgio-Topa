@@ -11,6 +11,12 @@
       "password": "$2a$10$GpcZjW6Ui9QKugXQFno73.77onV/9u3mTgQI781KvKGiAI9.B9uzy",
       "nome": "Mario",
       "id": 2
+    },
+    {
+      "email": "carmelo@zappulla.com",
+      "password": "$2a$10$dlSWWVEPemY8kWCGJ4wRXu1onVZpIXglKx5JAzNqgbgoC8gzr5YZK",
+      "nome": "carmelo",
+      "id": 3
     }
   ]
 }
