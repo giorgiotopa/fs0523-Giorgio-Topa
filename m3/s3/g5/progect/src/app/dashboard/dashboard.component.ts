@@ -25,7 +25,6 @@ export class DashboardComponent {
     this.arrayCity.length = 0;
     this.dashboardSvc.addCity(this.city);
     this.dashboardSvc.getCity(this.city).subscribe(prod =>{
-      console.log(prod);
       prod.forEach(c =>{
         this.arrayCity.push(c);
       })
