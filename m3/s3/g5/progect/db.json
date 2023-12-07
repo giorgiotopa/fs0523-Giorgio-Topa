@@ -5,6 +5,12 @@
       "password": "$2a$10$IcvsMejIyWWn05M5jLmk/.7wciSRl1.S98D4DH5sNNKCJ5wMaJA7.",
       "nome": "Giorgio",
       "id": 1
+    },
+    {
+      "email": "mario@rossi.it",
+      "password": "$2a$10$GpcZjW6Ui9QKugXQFno73.77onV/9u3mTgQI781KvKGiAI9.B9uzy",
+      "nome": "Mario",
+      "id": 2
     }
   ]
 }
