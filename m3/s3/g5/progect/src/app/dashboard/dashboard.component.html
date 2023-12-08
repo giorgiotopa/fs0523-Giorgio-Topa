@@ -7,6 +7,17 @@
 <ul *ngFor="let city of arrayCity">
   <li (click)="cerca(city.lat,city.lon)">{{city.name}}, {{city.state}}, {{city.country}}</li>
 </ul>
-<!-- <ul *ngFor="let weather of weatherLocal.list">
-  <li >{{weather}},</li>
-</ul> -->
+<div class="d-flex">
+  <div>
+    <ul *ngFor="let w of arrayWeather">
+      <li >{{w[0].main}}, </li>
+      <li>{{w[0].description}}</li>
+    </ul>
+  </div>
+  <div>
+    <ul *ngFor="let t of arratTime">
+      <li >{{t}}, </li>
+    </ul>
+  </div>
+
+</div>
