@@ -10,8 +10,8 @@
 <div class="d-flex">
   <div>
     <ul *ngFor="let w of arrayWeather">
-      <li >{{w[0].main}}, </li>
-      <li>{{w[0].description}}</li>
+      <li ngClass="{{w[0].main| lowercase}}" >{{w[0].main| lowercase}} </li>
+      <li ngClass="{{w[0].description}}">{{w[0].description}}</li>
     </ul>
   </div>
   <div>
