@@ -16,7 +16,8 @@
   </div>
   <div>
     <ul *ngFor="let t of arratTime">
-      <li >{{t}}, </li>
+      <li >{{t | date: 'HH:mm' }}</li>
+      <li >{{t | date: 'dd/MM/yyyy'}} </li>
     </ul>
   </div>
 
