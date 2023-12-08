@@ -17,6 +17,12 @@
       "password": "$2a$10$dlSWWVEPemY8kWCGJ4wRXu1onVZpIXglKx5JAzNqgbgoC8gzr5YZK",
       "nome": "carmelo",
       "id": 3
+    },
+    {
+      "email": "kvicha@kvara",
+      "password": "$2a$10$YirNmwUX2ihsEpaSe/LSneF2UteotUa.F2YobimL9KtozQ4d.BlVC",
+      "nome": "kvara",
+      "id": 4
     }
   ]
 }
