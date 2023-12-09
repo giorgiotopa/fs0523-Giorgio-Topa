@@ -1,6 +1,12 @@
-<div class="container row">
+
+<div class="d-flex mt-4 ms-3">
+  <h2 routerLink="/dashboard" class="me-5 dash-prefer">Dashboard</h2>
+  <h2 routerLink="/dashboard/preferiti" class="ms-5 dash-prefer">Preferiti</h2>
+</div>
+
+<div class="container row mt-5">
  <div class="col-8 row">
-  <h2 class="col-7 mt-5">Che tempo fa?</h2>
+  <h2 class="col-7 ">Che tempo fa?</h2>
   <div class="col-12 row">
     <form class="col-6">
       <input type="text" placeholder="Inserisci una città" [(ngModel)]="city" name="city" class="form-control mt-3">
@@ -29,12 +35,11 @@
 
 </div>
 
-<div *ngIf="arrayWeather[0]" class="card col-4">
-   <div ngClass="{{arrayWeather[0].main| lowercase}}" class="imgCard"></div>
+<div *ngFor="let w of arrayWeather[0]" class="card col-4 mt-3">
+   <div ngClass="{{w.main| lowercase}}" class="imgCard "></div>
    <div class="card-body">
-     <h5 class="card-title">Card title</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
+     <h5 class="card-title">{{city}}</h5>
+     <!-- <button (click)="addPrefer(city)" class="btn btn-warning mt-2">Aggiungi ai Preferiti</button> -->
    </div>
  </div>
 

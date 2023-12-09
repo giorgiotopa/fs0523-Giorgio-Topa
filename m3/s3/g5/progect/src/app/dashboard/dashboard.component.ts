@@ -34,6 +34,8 @@ export class DashboardComponent {
 
   cerca(lat:number,lon:number){
     this.dashboardSvc.getClimate(lat,lon).subscribe(prod =>{
+      console.log(prod);
+      this.city = prod.city.name
       prod.list.forEach(c =>{
         this.arratTime.push(c.dt_txt);
         this.weather = c.weather
@@ -42,6 +44,10 @@ export class DashboardComponent {
     });
     this.arrayCity.length = 0;
   }
+
+  // addPrefer(city:string){
+
+  // }
 
 
 }

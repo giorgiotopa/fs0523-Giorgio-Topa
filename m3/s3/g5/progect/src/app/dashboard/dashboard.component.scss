@@ -1,7 +1,9 @@
+.dash-prefer{
+  cursor: pointer;
+}
 ul{
   list-style: none;
 }
-
 .inputCerca{
   cursor: pointer;
 }
@@ -10,10 +12,12 @@ ul{
   border: none;
 }
 .imgCard{
-  height: 8rem;
+  height: 12rem;
+  width: 12rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 10px;
 }
 
 .weather-timeContainer{

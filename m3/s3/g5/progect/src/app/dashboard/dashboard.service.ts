@@ -18,6 +18,4 @@ export class DashboardService {
   getCity(city:string){
     return this.http.get<iCity[]>('http://api.openweathermap.org/geo/1.0/direct?q='+`/${city}`+'&limit=5&appid=b8cebc030b7ab67c7fd9147cb1c6390f')
   }
-
-
 }
