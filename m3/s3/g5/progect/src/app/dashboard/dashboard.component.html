@@ -1,24 +1,41 @@
-<p>dashboard works!!!!!!!</p>
+<div class="container row">
+ <div class="col-8 row">
+  <h2 class="col-7 mt-5">Che tempo fa?</h2>
+  <div class="col-12 row">
+    <form class="col-6">
+      <input type="text" placeholder="Inserisci una città" [(ngModel)]="city" name="city" class="form-control mt-3">
+      <button (click)="invia()" class="btn btn-success mt-1 mb-4">Cerca</button>
+    </form>
 
-
-<input type="text" placeholder="Inserisci una città" [(ngModel)]="city" name="city" class="form-control">
-<button (click)="invia()" class="btn btn-success">Salva</button>
-
-<ul *ngFor="let city of arrayCity">
-  <li (click)="cerca(city.lat,city.lon)">{{city.name}}, {{city.state}}, {{city.country}}</li>
+  <ul class="col-7" *ngFor="let city of arrayCity">
+    <li class="form-control inputCerca" (click)="cerca(city.lat,city.lon)">{{city.name}}, {{city.state}}, {{city.country}}</li>
 </ul>
-<div class="d-flex">
-  <div>
-    <ul *ngFor="let w of arrayWeather">
-      <li ngClass="{{w[0].main| lowercase}}" >{{w[0].main| lowercase}} </li>
-      <li ngClass="{{w[0].description}}">{{w[0].description}}</li>
-    </ul>
-  </div>
-  <div>
-    <ul *ngFor="let t of arratTime">
-      <li >{{t | date: 'HH:mm' }}</li>
-      <li >{{t | date: 'dd/MM/yyyy'}} </li>
-    </ul>
-  </div>
+<div class="d-flex mt-5">
+    <div class="">
+      <ul *ngFor="let w of arrayWeather" class="d-flex weather-timeContainer">
+        <li class="iconContainer me-2" ngClass="{{w[0].main| lowercase}}" ></li>
+        <li class="fs-4">{{w[0].description | titlecase}}</li>
+      </ul>
+    </div>
+    <div>
+      <ul *ngFor="let t of arratTime" class="weather-timeContainer">
+        <li class="fs-4">{{t | date: 'HH:mm' }}<span class="ms-3">{{t | date: 'dd/MM/yyyy'}} </span></li>
+
+      </ul>
+    </div>
+ </div>
+
+ </div>
+
+</div>
+
+<div *ngIf="arrayWeather[0]" class="card col-4">
+   <div ngClass="{{arrayWeather[0].main| lowercase}}" class="imgCard"></div>
+   <div class="card-body">
+     <h5 class="card-title">Card title</h5>
+     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>
 
 </div>

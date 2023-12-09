@@ -1,3 +1,50 @@
+ul{
+  list-style: none;
+}
+
+.inputCerca{
+  cursor: pointer;
+}
+.card{
+  width: 18rem;
+  border: none;
+}
+.imgCard{
+  height: 8rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.weather-timeContainer{
+  height: 3rem;
+}
+
+.iconContainer{
+  height: 2rem;
+  width: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 5px;
+}
+
 .clouds{
-  background-color: aqua;
+background-image: url(../../assets/img/coulds.png);
+}
+
+.clear{
+  background-image: url(../../assets/img/clear.png);
+}
+.snow{
+  background-image: url(../../assets/img/snow.png);
+}
+.rain{
+  background-image: url(../../assets/img/rain\ -\ drizzy.png);
+}
+.drizzle{
+  background-image: url(../../assets/img/rain\ -\ drizzy.png);
+}
+.thunderstorm{
+  background-image: url(../../assets/img/thunderstone.png);
 }

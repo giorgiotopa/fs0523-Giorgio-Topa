@@ -23,6 +23,12 @@
       "password": "$2a$10$YirNmwUX2ihsEpaSe/LSneF2UteotUa.F2YobimL9KtozQ4d.BlVC",
       "nome": "kvara",
       "id": 4
+    },
+    {
+      "email": "capitano@livay.com",
+      "password": "$2a$10$vlzdAz03kuL.iECqWefuZOrgUmIiSLZhGUSwkrgw3MXL8G2Ojda1G",
+      "nome": "Livay",
+      "id": 5
     }
   ]
 }
